@@ -1,0 +1,9 @@
+sucursal_id,nombre,ciudad,direccion,latitud,longitud,telefono,horario,activa
+SUC001,Sucursal Centro,Santiago,Av. Libertador 100,-33.4569,-70.6483,(+562) 2560-5844,Lun-Vie 09:00-18:00,True
+SUC002,Sucursal Las Condes,Las Condes,Av. Apoquindo 4500,-33.4136,-70.5809,(+562) 2939-5314,Lun-Vie 09:00-18:00,True
+SUC003,Sucursal Providencia,Providencia,Av. Providencia 1200,-33.4317,-70.6062,(+562) 2654-7014,Lun-Vie 09:00-18:00,True
+SUC004,Sucursal Maipú,Maipú,Av. Américo Vespucio 300,-33.5115,-70.758,(+562) 2564-1011,Lun-Vie 09:00-18:00,True
+SUC005,Sucursal La Florida,La Florida,Av. Vicuña Mackenna 7000,-33.5266,-70.5898,(+562) 2894-9289,Lun-Vie 09:00-18:00,True
+SUC006,Sucursal Valparaíso,Valparaíso,Av. Brasil 800,-33.0472,-71.6127,(+562) 2488-4039,Lun-Vie 09:00-18:00,True
+SUC007,Sucursal Viña del Mar,Viña del Mar,Av. San Martín 400,-33.0245,-71.5518,(+562) 2119-6965,Lun-Vie 09:00-18:00,True
+SUC008,Sucursal Concepción,Concepción,Av. O'Higgins 650,-36.827,-73.0495,(+562) 2894-4912,Lun-Vie 09:00-18:00,True

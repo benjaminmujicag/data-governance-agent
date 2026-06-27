@@ -1,0 +1,75 @@
+POLÍTICA DE USO RESPONSABLE DE IA Y MODELOS ANALÍTICOS
+FinCorp S.A. — Versión 1.0 — Vigente desde: 01/05/2025
+Responsable: Gerencia de Datos y Analítica + DPO | Aprobado por: Directorio
+
+1. OBJETIVO
+Establecer los requisitos mínimos para el desarrollo, validación, despliegue y monitoreo de
+modelos de inteligencia artificial y sistemas de decisión automatizados en FinCorp S.A., con
+énfasis en el uso responsable de datos personales y la no discriminación.
+
+2. ALCANCE
+Aplica a todo sistema que use algoritmos estadísticos, machine learning, modelos de lenguaje
+(LLM) o reglas derivadas de datos para tomar o recomendar decisiones que afecten a clientes,
+empleados o contrapartes de FinCorp S.A. Incluye modelos de scoring, chatbots, sistemas de
+detección de fraude y herramientas generativas.
+
+3. PRINCIPIOS DE IA RESPONSABLE
+
+3.1 EXPLICABILIDAD: toda decisión automatizada que afecte de forma significativa a un cliente
+    (aprobación de crédito, segmentación para producto, alerta de fraude) debe poder explicarse
+    en lenguaje comprensible para el titular del dato (Art. 33, Ley 21.719).
+
+3.2 NO DISCRIMINACIÓN: los modelos no pueden usar como variable de entrada directa ni como proxy
+    características protegidas: origen étnico, género, religión, orientación sexual, discapacidad
+    o cualquier categoría de datos sensibles (Art. 16, Ley 21.719).
+
+3.3 SUPERVISIÓN HUMANA: las decisiones de alto impacto (negar un crédito, bloquear una cuenta,
+    calificar un cliente como de alto riesgo) requieren revisión humana disponible. No se admite
+    decisión automatizada exclusiva sin mecanismo de revisión por una persona.
+
+3.4 MINIMIZACIÓN DE DATOS: se entrenan los modelos con el mínimo de datos necesarios. Prohibido
+    incluir campos de identificación directa (RUT, nombre, email) como variables de entrada
+    salvo que sean estrictamente necesarios y se cuente con base legal.
+
+3.5 ROBUSTEZ Y SEGURIDAD: los modelos deben ser evaluados ante ataques de adversarial input y
+    prompt injection (para LLMs) antes de pasar a producción.
+
+4. CICLO DE VIDA DE UN MODELO
+
+4.1 DISEÑO Y DATOS
+- Evaluación de Impacto en Privacidad (PIA / DPIA) para todo modelo que use datos personales.
+- Inventario de variables con su clasificación y base legal de uso.
+- Dataset de entrenamiento con datos anonimizados o seudonimizados siempre que sea posible.
+
+4.2 DESARROLLO Y VALIDACIÓN
+- Métricas de desempeño por segmento (no solo promedio global) para detectar sesgos.
+- Prueba de equidad (fairness check) obligatoria antes de aprobación para producción.
+- Golden set de evaluación aprobado por el Data Owner; no puede modificarse tras su aprobación.
+
+4.3 APROBACIÓN PARA PRODUCCIÓN
+- Revisión por Comité de Modelos (representantes de Datos, Legal, Riesgo, DPO).
+- Para modelos LLM generativos: prueba de alucinaciones y consistencia de respuestas.
+- Para modelos de scoring o decisión: prueba de estabilidad (PSI < 0.1 en validación OOT).
+
+4.4 MONITOREO EN PRODUCCIÓN
+- Revisión mensual de drift de datos de entrada (PSI, KL divergence o equivalente).
+- Revisión trimestral de desempeño en producción vs. línea base de validación.
+- Umbral de degradación: si el desempeño cae >10% respecto a la línea base, se activa
+  revisión urgente y posible retirada del modelo.
+
+5. DATOS PERSONALES EN MODELOS GENERATIVOS (LLM)
+El uso de modelos de lenguaje grande (LLM) en productos de FinCorp S.A. está sujeto a:
+- Prohibición de enviar datos personales no enmascarados al proveedor del LLM (API externa).
+- Registro de toda interacción que incluya datos personales, para ejercer derechos ARCO.
+- Contratos de encargo de tratamiento firmados con el proveedor del modelo (OpenAI, Google, etc.)
+  que garanticen que los datos no se usan para entrenar modelos de terceros.
+- Revisión humana de respuestas del LLM antes de usarlas en decisiones de alto impacto.
+
+6. RETIRO DE MODELOS
+Un modelo debe retirarse de producción cuando:
+- Su desempeño degradado no puede recuperarse con re-entrenamiento.
+- Se detecta sesgo discriminatorio sistemático.
+- Cambia la base legal que habilitaba el uso de los datos de entrenamiento.
+- Lo ordena la autoridad de control o el Comité de Modelos.
+Al retirar un modelo se deben eliminar o anonimizar los datasets de entrenamiento, conforme
+a la Política de Retención de Datos.

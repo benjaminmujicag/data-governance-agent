@@ -1,0 +1,79 @@
+POLÍTICA DE CALIDAD DEL DATO
+FinCorp S.A. — Versión 1.5 — Vigente desde: 15/02/2025
+Responsable: Gerencia de Datos y Analítica | Aprobado por: Comité de Datos
+
+1. OBJETIVO
+Asegurar que los datos utilizados en los procesos de negocio, modelos analíticos y reportes
+regulatorios de FinCorp S.A. sean precisos, completos, consistentes, oportunos y válidos,
+minimizando el riesgo de decisiones incorrectas por datos deficientes.
+
+2. DIMENSIONES DE CALIDAD
+FinCorp S.A. evalúa la calidad de sus activos de datos en seis dimensiones:
+
+2.1 COMPLETITUD
+Porcentaje de registros sin valores nulos en campos obligatorios. SLA mínimo: 95% de
+completitud en campos críticos (campos que alimentan reportes regulatorios o decisiones
+de crédito). Campos de contacto (email, teléfono): SLA del 90%.
+
+2.2 EXACTITUD
+Los datos reflejan fielmente la realidad del objeto que describen. Medición: comparación
+muestral contra fuentes primarias (ej.: verificación de RUT contra registro SII, validación
+de IBAN contra base de cuentas). Umbral mínimo: 99% en datos financieros críticos.
+
+2.3 CONSISTENCIA
+Los mismos datos tienen el mismo valor en todos los sistemas donde se replican. Ejemplo:
+el saldo de una cuenta en el sistema core debe coincidir con el reportado al CRM. Medición:
+reconciliaciones automáticas diarias entre sistemas fuente y sistemas destino.
+
+2.4 OPORTUNIDAD (TIMELINESS)
+Los datos están disponibles cuando se necesitan, actualizados según la frecuencia requerida.
+SLA por tipo de dato:
+- Datos de transacciones en tiempo real: latencia máxima 5 segundos.
+- Datos de saldo de cuentas: actualización máxima cada 15 minutos.
+- Datos de perfiles de clientes: actualización máxima cada 24 horas.
+- Datos de riesgo crediticio: actualización máxima cada 72 horas.
+
+2.5 UNICIDAD (SIN DUPLICADOS)
+Cada entidad del negocio (cliente, cuenta, transacción) tiene un único registro maestro.
+Medición: detección de duplicados con índices de similitud en nombre+RUT. Umbral máximo
+tolerable de duplicados: 0.1% en el registro maestro de clientes.
+
+2.6 VALIDEZ
+Los datos cumplen con los formatos, rangos y dominios definidos en el diccionario de datos.
+Ejemplos: RUT con formato válido y dígito verificador correcto; fechas en ISO 8601; montos
+sin valores negativos en campos donde no corresponde; códigos de país ISO 3166.
+
+3. ROLES Y RESPONSABILIDADES
+
+3.1 DATA OWNER: define los SLAs de calidad para su dominio; aprueba las reglas de validación;
+    es responsable último de la calidad de sus datos.
+3.2 DATA STEWARD: implementa y monitorea las reglas de calidad; gestiona las alertas; coordina
+    la corrección de problemas con los equipos de ingeniería.
+3.3 INGENIERO DE DATOS: implementa validaciones en los pipelines (Great Expectations, dbt tests
+    u otra herramienta aprobada); corrige datos con problemas técnicos.
+3.4 ANALISTA DE DATOS: reporta anomalías detectadas en el uso cotidiano; no modifica datos de
+    producción directamente.
+
+4. PROCESO DE CORRECCIÓN DE DATOS
+Paso 1: Detección — alerta automática del pipeline o reporte manual del analista.
+Paso 2: Triage — el Data Steward clasifica el defecto: crítico (impacta reporte regulatorio
+        o decisión de crédito) / mayor / menor.
+Paso 3: Corrección — defectos críticos: resolución en máximo 4 horas hábiles; mayores: 2 días
+        hábiles; menores: próximo ciclo de mantenimiento.
+Paso 4: Validación — el Data Owner certifica que el dato corregido es exacto.
+Paso 5: Postmortem — para defectos críticos, análisis de causa raíz y acción preventiva.
+
+5. DATOS DE BAJA CALIDAD EN MODELOS DE IA Y ANALÍTICA
+Antes de entrenar un modelo o publicar un reporte analítico, el equipo debe ejecutar un
+"data quality gate" que certifique:
+- Completitud > umbral definido para las variables clave.
+- Sin duplicados en las claves primarias del dataset.
+- Distribución de variables consistente con periodos anteriores (drift check básico).
+Si el dataset no pasa el gate, el entrenamiento o publicación queda bloqueado hasta resolver.
+
+6. MÉTRICAS E INFORMES
+El área de Datos publica mensualmente el "Reporte de Calidad de Datos" con:
+- Score de calidad por dominio y dimensión.
+- Incidentes de calidad abiertos y cerrados en el período.
+- Tendencias (mejora o degradación) por tabla o fuente crítica.
+Este reporte es insumo obligatorio para el Comité de Datos.

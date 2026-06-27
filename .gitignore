@@ -1,0 +1,19 @@
+# Secretos
+.env
+
+# Documentos internos (estrategia de aprendizaje / contexto personal — no publicar)
+CONTEXTO.md
+APRENDIZAJES.md
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Datos pesados / descargados (mantener el repo liviano)
+data/publico/*.csv
+data/publico/*.xlsx
+
+# Postgres (volumen local de docker)
+pgdata/

@@ -1,0 +1,201 @@
+cliente_id,nombre,rut,email,telefono,fecha_nacimiento,comuna,segmento,activo
+1,Juan Martínez,10000037-3,juan.martínez4@yahoo.com,+56939958838,1966-04-05,Providencia,Basic,True
+2,Sofía Araya,10000074-0,sofía.araya55@gmail.com,+56922575562,1969-10-22,Ñuñoa,Basic,True
+3,Felipe Vega,10000111-6,felipe.vega26@outlook.com,+56939587039,1980-02-24,Conchalí,Standard,True
+4,Pedro Fuentes,10000148-5,pedro.fuentes90@empresa.cl,+56947295260,1966-12-22,Ñuñoa,Standard,True
+5,María Rodríguez,10000185-5,maría.rodríguez49@gmail.com,+56956164955,1987-01-30,Maipú,Premium,False
+6,Felipe Vega,10000222-1,felipe.vega16@empresa.cl,+56984093639,1973-02-24,Conchalí,Standard,True
+7,María Rodríguez,10000259-4,maría.rodríguez6@hotmail.com,+56920709497,1998-05-14,Ñuñoa,Premium,False
+8,Valentina Torres,10000296-2,valentina.torres59@yahoo.com,+56959684848,1975-12-08,Ñuñoa,Basic,True
+9,María Rodríguez,10000333-8,maría.rodríguez78@hotmail.com,+56942857966,1967-05-01,Vitacura,Standard,True
+10,Felipe Vega,10000370-0,felipe.vega29@yahoo.com,+56940742311,1996-11-11,Santiago,Standard,False
+11,Valentina Torres,10000407-9,valentina.torres9@hotmail.com,+56952235350,1969-07-15,Vitacura,Standard,False
+12,Laura Soto,10000444-3,laura.soto34@hotmail.com,+56985345555,1984-03-05,Maipú,Basic,False
+13,Sofía Araya,10000481-3,sofía.araya52@yahoo.com,+56928566572,1982-11-09,Vitacura,Premium,True
+14,Juan Martínez,10000518-K,juan.martínez20@hotmail.com,+56966661351,1986-10-02,Providencia,Standard,False
+15,Tomás Espinoza,10000555-4,tomas.espinoza60@outlook.com,+56984252722,1998-08-12,Santiago,Basic,True
+16,Felipe Vega,10000592-K,felipe.vega97@yahoo.com,+56955657579,1965-01-01,Maipú,Standard,True
+17,Daniela Rojas,10000629-8,daniela.rojas1@yahoo.com,+56933978249,1982-10-09,Providencia,Basic,True
+18,Javiera Núñez,10000666-2,javiera.núñez78@hotmail.com,+56960185867,1994-03-15,Las Condes,Basic,True
+19,Tomás Espinoza,10000703-0,tomas.espinoza42@empresa.cl,+56925014631,1976-04-13,Maipú,Premium,True
+20,Diego Muñoz,10000740-1,diego.muñoz73@gmail.com,+56975228535,1996-08-08,Providencia,Basic,True
+21,Laura Soto,10000777-8,laura.soto85@empresa.cl,+56932162965,1971-11-21,San Miguel,Basic,False
+22,Claudia Herrera,10000814-4,claudia.herrera70@hotmail.com,+56963551839,1990-02-16,Pudahuel,Standard,False
+23,Juan Martínez,10000851-1,juan.martínez32@hotmail.com,+56955377076,1960-12-10,Conchalí,Basic,True
+24,Sofía Araya,10000888-1,sofía.araya29@gmail.com,+56994705205,1962-08-22,Ñuñoa,Premium,True
+25,Francisca Reyes,10000925-3,francisca.reyes10@outlook.com,+56947376585,1990-01-03,Vitacura,Premium,True
+26,Sofía Araya,10000962-3,sofía.araya74@empresa.cl,+56973481353,1996-03-22,La Florida,Premium,True
+27,Juan Martínez,10000999-5,juan.martínez85@empresa.cl,+56966851760,1978-06-10,Vitacura,Basic,True
+28,Juan Martínez,10001036-5,juan.martínez8@empresa.cl,+56924665841,1971-02-25,Ñuñoa,Premium,False
+29,Laura Soto,10001073-4,laura.soto55@hotmail.com,+56972092888,1971-03-16,Providencia,Standard,True
+30,Carlos López,10001110-0,carlos.lopez84@outlook.com,+56922517517,1993-10-20,Ñuñoa,Premium,False
+31,Ignacio Pérez,10001147-6,ignacio.perez62@hotmail.com,+56917869910,1967-05-21,La Florida,Premium,False
+32,Valentina Torres,10001184-6,valentina.torres59@yahoo.com,+56984593961,1989-09-09,Vitacura,Premium,True
+33,Rodrigo Vargas,10001221-9,rodrigo.vargas28@gmail.com,+56982772208,1962-09-25,Pudahuel,Premium,True
+34,Sofía Araya,10001258-8,sofía.araya62@outlook.com,+56931130263,1962-07-20,San Miguel,Premium,True
+35,María Rodríguez,10001295-K,maría.rodríguez77@gmail.com,+56941568532,1978-02-10,Providencia,Basic,True
+36,Sofía Araya,10001332-9,sofía.araya77@gmail.com,+56921003626,1978-10-21,Conchalí,Basic,True
+37,Valentina Torres,10001369-3,valentina.torres27@yahoo.com,+56945650176,1977-10-02,Las Condes,Basic,True
+38,Daniela Rojas,10001406-0,daniela.rojas41@gmail.com,+56971510041,1987-11-12,Conchalí,Premium,True
+39,Felipe Vega,10001443-4,felipe.vega28@outlook.com,+56927778019,1975-08-28,Providencia,Premium,True
+40,Rodrigo Vargas,10001480-8,rodrigo.vargas21@empresa.cl,+56950603163,1987-06-09,San Miguel,Premium,True
+41,Juan Martínez,10001517-1,juan.martínez18@yahoo.com,+56924366125,1993-04-20,San Miguel,Premium,True
+42,Rodrigo Vargas,10001554-5,rodrigo.vargas78@hotmail.com,+56937326368,1990-11-02,Maipú,Basic,False
+43,Valentina Torres,10001591-K,valentina.torres7@gmail.com,+56966851377,1997-03-15,Maipú,Premium,True
+44,Francisca Reyes,10001628-K,francisca.reyes99@hotmail.com,+56945159040,1967-04-01,Vitacura,Basic,False
+45,Felipe Vega,10001665-1,felipe.vega2@gmail.com,+56930005727,1984-06-21,Santiago,Standard,True
+46,Sebastián Castro,10001702-4,sebastian.castro17@gmail.com,+56958942697,2000-04-28,Santiago,Standard,True
+47,Diego Muñoz,10001739-5,diego.muñoz86@gmail.com,+56985146293,1999-08-29,La Florida,Basic,True
+48,Diego Muñoz,10001776-6,diego.muñoz21@hotmail.com,+56913326769,1968-01-17,Pudahuel,Standard,True
+49,Valentina Torres,10001813-6,valentina.torres21@gmail.com,+56915197528,1998-07-07,Vitacura,Premium,True
+50,Daniela Rojas,10001850-3,daniela.rojas45@yahoo.com,+56939920292,1961-01-22,Ñuñoa,Standard,True
+51,Valentina Torres,10001887-5,valentina.torres9@yahoo.com,+56996098221,1982-11-07,La Florida,Basic,True
+52,Ana García,10001924-2,ana.garcía15@yahoo.com,+56987925434,1971-11-28,Santiago,Premium,False
+53,Matías Silva,10001961-6,matías.silva94@yahoo.com,+56991363974,1982-12-10,Providencia,Standard,True
+54,Valentina Torres,10001998-0,valentina.torres6@empresa.cl,+56979782527,1996-03-05,San Miguel,Basic,True
+55,Matías Silva,10002035-K,matías.silva56@gmail.com,+56954318698,1987-12-14,Pudahuel,Basic,True
+56,Rodrigo Vargas,10002072-K,rodrigo.vargas65@yahoo.com,+56964813568,1974-08-19,La Florida,Basic,True
+57,Felipe Vega,10002109-6,felipe.vega17@hotmail.com,+56999245317,1977-01-02,Las Condes,Basic,True
+58,Camila Morales,10002146-4,camila.morales71@gmail.com,+56948508907,1969-06-05,La Florida,Basic,True
+59,Daniela Rojas,10002183-K,daniela.rojas57@empresa.cl,+56938682516,1982-12-06,Vitacura,Basic,True
+60,María Rodríguez,10002220-K,maría.rodríguez37@outlook.com,+56994951883,1987-10-11,Pudahuel,Premium,True
+61,Rodrigo Vargas,10002257-2,rodrigo.vargas29@hotmail.com,+56913278320,1962-01-27,Ñuñoa,Standard,True
+62,Daniela Rojas,10002294-3,daniela.rojas54@outlook.com,+56961536717,1982-03-05,La Florida,Premium,True
+63,Ana García,10002331-6,ana.garcía97@gmail.com,+56939372360,1967-11-21,San Miguel,Standard,True
+64,Felipe Vega,10002368-7,felipe.vega32@gmail.com,+56927896471,1995-12-13,Vitacura,Basic,True
+65,Daniela Rojas,10002405-6,daniela.rojas79@outlook.com,+56983534128,1980-01-01,Las Condes,Basic,False
+66,Daniela Rojas,10002442-K,daniela.rojas34@hotmail.com,+56947220099,1994-05-09,San Miguel,Standard,True
+67,Valentina Torres,10002479-4,valentina.torres57@gmail.com,+56941473195,1972-03-09,Pudahuel,Standard,True
+68,Laura Soto,10002516-6,laura.soto20@hotmail.com,+56930509175,1991-09-08,Ñuñoa,Premium,False
+69,Sebastián Castro,10002553-7,sebastian.castro43@outlook.com,+56965804273,1962-10-17,Ñuñoa,Standard,False
+70,Sofía Araya,10002590-9,sofía.araya90@gmail.com,+56961053877,1981-05-24,Santiago,Standard,True
+71,Camila Morales,10002627-8,camila.morales54@outlook.com,+56990967191,2000-04-09,Ñuñoa,Standard,True
+72,Valentina Torres,10002664-0,valentina.torres56@empresa.cl,+56962191530,1975-01-29,La Florida,Basic,True
+73,Daniela Rojas,10002701-8,daniela.rojas17@outlook.com,+56913619375,2000-09-06,La Florida,Basic,True
+74,María Rodríguez,10002738-2,maría.rodríguez83@empresa.cl,+56971968116,1968-02-25,Santiago,Standard,False
+75,Francisca Reyes,10002775-5,francisca.reyes28@empresa.cl,+56955298556,1994-02-22,La Florida,Standard,False
+76,Valentina Torres,10002812-0,valentina.torres11@empresa.cl,+56982399599,1962-05-03,Pudahuel,Premium,True
+77,Carlos López,10002849-3,carlos.lopez97@gmail.com,+56936757737,1997-08-23,Santiago,Basic,True
+78,Diego Muñoz,10002886-K,diego.muñoz17@empresa.cl,+56925353091,1985-04-19,Ñuñoa,Standard,True
+79,Matías Silva,10002923-9,matías.silva22@outlook.com,+56925372341,1994-11-21,Las Condes,Standard,True
+80,Sofía Araya,10002960-9,sofía.araya4@yahoo.com,+56960372847,1977-10-16,Ñuñoa,Premium,True
+81,Juan Martínez,10002997-K,juan.martínez90@yahoo.com,+56990585882,1996-02-18,Providencia,Basic,True
+82,Matías Silva,10003034-K,matías.silva69@empresa.cl,+56959737181,1963-02-03,San Miguel,Basic,True
+83,Ana García,10003071-1,ana.garcía54@empresa.cl,+56968186525,1976-03-31,Vitacura,Basic,True
+84,Sebastián Castro,10003108-K,sebastian.castro23@outlook.com,+56946249845,1987-08-18,San Miguel,Standard,False
+85,Sebastián Castro,10003145-4,sebastian.castro94@outlook.com,+56953258988,1998-03-16,Ñuñoa,Premium,True
+86,Daniela Rojas,10003182-9,daniela.rojas32@empresa.cl,+56991917334,1989-12-21,La Florida,Standard,True
+87,Ignacio Pérez,10003219-7,ignacio.perez42@hotmail.com,+56938470244,1975-12-01,Maipú,Standard,True
+88,Tomás Espinoza,10003256-8,tomas.espinoza90@yahoo.com,+56911362459,1983-03-05,Ñuñoa,Premium,True
+89,Sebastián Castro,10003293-3,sebastian.castro63@outlook.com,+56973900135,1988-12-21,Vitacura,Standard,True
+90,María Rodríguez,10003330-6,maría.rodríguez38@hotmail.com,+56942655866,1973-09-25,Conchalí,Standard,False
+91,Felipe Vega,10003367-6,felipe.vega68@yahoo.com,+56983871890,1974-11-02,Pudahuel,Basic,False
+92,Valentina Torres,10003404-3,valentina.torres40@yahoo.com,+56926194158,1992-05-09,Ñuñoa,Standard,True
+93,Felipe Vega,10003441-3,felipe.vega98@hotmail.com,+56939042654,1993-02-17,Vitacura,Standard,True
+94,Juan Martínez,10003478-3,juan.martínez25@yahoo.com,+56958436637,1968-01-18,Maipú,Premium,True
+95,Valentina Torres,10003515-8,valentina.torres6@gmail.com,+56949209916,1991-04-14,Las Condes,Basic,False
+96,Juan Martínez,10003552-4,juan.martínez2@outlook.com,+56973001391,1981-06-22,Vitacura,Standard,True
+97,Carlos López,10003589-1,carlos.lopez33@empresa.cl,+56918770247,1977-12-22,Vitacura,Premium,True
+98,Laura Soto,10003626-4,laura.soto20@outlook.com,+56921432787,1971-02-18,Providencia,Basic,False
+99,Tomás Espinoza,10003663-3,tomas.espinoza77@outlook.com,+56980138498,1977-01-23,Vitacura,Standard,True
+100,Sofía Araya,10003700-9,sofía.araya55@yahoo.com,+56993352876,1962-09-13,Conchalí,Basic,True
+101,Claudia Herrera,10003737-4,claudia.herrera81@hotmail.com,+56998641164,1963-08-23,Las Condes,Premium,True
+102,Felipe Vega,10003774-0,felipe.vega10@hotmail.com,+56964830300,1980-03-17,Conchalí,Standard,True
+103,Carlos López,10003811-4,carlos.lopez30@yahoo.com,+56970939053,1963-03-12,Ñuñoa,Standard,True
+104,Sebastián Castro,10003848-3,sebastian.castro15@outlook.com,+56996924061,1966-09-07,Maipú,Premium,True
+105,Carlos López,10003885-9,carlos.lopez22@yahoo.com,+56986397676,1972-12-11,Vitacura,Premium,False
+106,Rodrigo Vargas,10003922-4,rodrigo.vargas90@empresa.cl,+56977172238,1984-03-22,Vitacura,Standard,True
+107,Tomás Espinoza,10003959-5,tomas.espinoza6@empresa.cl,+56991029073,1971-03-26,Santiago,Premium,True
+108,Sofía Araya,10003996-K,sofía.araya76@gmail.com,+56946173157,1985-11-06,Santiago,Premium,False
+109,Javiera Núñez,10004033-4,javiera.núñez84@empresa.cl,+56934359060,1986-04-04,La Florida,Basic,False
+110,María Rodríguez,10004070-6,maría.rodríguez61@yahoo.com,+56954735895,1974-05-27,Providencia,Premium,True
+111,Sebastián Castro,10004107-4,sebastian.castro89@empresa.cl,+56998930456,1977-12-18,San Miguel,Premium,False
+112,María Rodríguez,10004144-5,maría.rodríguez41@yahoo.com,+56925558733,1994-08-27,La Florida,Basic,True
+113,Felipe Vega,10004181-0,felipe.vega60@empresa.cl,+56935176902,1983-04-04,Pudahuel,Basic,False
+114,Daniela Rojas,10004218-3,daniela.rojas98@gmail.com,+56945843681,1984-08-20,Las Condes,Standard,False
+115,Ignacio Pérez,10004255-K,ignacio.perez16@gmail.com,+56991721371,1995-11-08,Ñuñoa,Basic,True
+116,Rodrigo Vargas,10004292-8,rodrigo.vargas71@gmail.com,+56964759583,1964-03-07,Ñuñoa,Premium,False
+117,Juan Martínez,10004329-7,juan.martínez83@hotmail.com,+56949172995,1982-10-29,Maipú,Standard,False
+118,Ignacio Pérez,10004366-8,ignacio.perez32@empresa.cl,+56929413516,1977-03-16,Ñuñoa,Basic,True
+119,María Rodríguez,10004403-5,maría.rodríguez36@empresa.cl,+56978147397,1971-12-26,Santiago,Standard,True
+120,Sofía Araya,10004440-2,sofía.araya75@empresa.cl,+56969934576,1984-02-28,Vitacura,Standard,True
+121,Felipe Vega,10004477-6,felipe.vega98@outlook.com,+56971115319,1974-06-08,Ñuñoa,Basic,True
+122,Sofía Araya,10004514-6,sofía.araya50@hotmail.com,+56915858241,1974-04-10,Vitacura,Basic,False
+123,Camila Morales,10004551-7,camila.morales85@hotmail.com,+56914968688,1965-08-30,San Miguel,Basic,True
+124,Juan Martínez,10004588-8,juan.martínez57@gmail.com,+56971327848,1960-09-08,Las Condes,Standard,True
+125,María Rodríguez,10004625-5,maría.rodríguez61@yahoo.com,+56993652460,1991-01-27,La Florida,Basic,True
+126,Francisca Reyes,10004662-6,francisca.reyes87@outlook.com,+56952501540,1988-02-12,Vitacura,Basic,True
+127,Tomás Espinoza,10004699-K,tomas.espinoza9@hotmail.com,+56948571356,1970-03-16,Providencia,Standard,True
+128,Juan Martínez,10004736-4,juan.martínez57@hotmail.com,+56913885234,1962-01-23,Pudahuel,Premium,True
+129,Matías Silva,10004773-2,matías.silva48@empresa.cl,+56942775624,1983-10-29,La Florida,Basic,True
+130,Pedro Fuentes,10004810-9,pedro.fuentes23@gmail.com,+56961344226,1987-10-19,Ñuñoa,Standard,True
+131,Diego Muñoz,10004847-7,diego.muñoz60@yahoo.com,+56944269370,1989-11-29,Santiago,Standard,True
+132,Felipe Vega,10004884-7,felipe.vega21@gmail.com,+56956381032,1986-05-10,Maipú,Basic,False
+133,Valentina Torres,10004921-3,valentina.torres59@yahoo.com,+56961632653,1998-04-12,Vitacura,Premium,True
+134,Camila Morales,10004958-9,camila.morales74@yahoo.com,+56949711319,1991-05-14,Maipú,Premium,False
+135,Valentina Torres,10004995-K,valentina.torres2@outlook.com,+56916582607,2000-11-05,Conchalí,Basic,False
+136,Rodrigo Vargas,10005032-5,rodrigo.vargas30@outlook.com,+56939394291,1988-07-22,Ñuñoa,Basic,True
+137,Laura Soto,10005069-K,laura.soto81@gmail.com,+56996750368,1961-10-07,Maipú,Standard,True
+138,Sofía Araya,10005106-1,sofía.araya47@hotmail.com,+56949609054,1974-08-27,La Florida,Premium,True
+139,Laura Soto,10005143-8,laura.soto70@yahoo.com,+56977349752,2000-12-22,Maipú,Premium,True
+140,Ignacio Pérez,10005180-1,ignacio.perez38@yahoo.com,+56972858374,1963-05-18,Las Condes,Premium,False
+141,Felipe Vega,10005217-6,felipe.vega47@gmail.com,+56911868130,1971-11-11,San Miguel,Premium,False
+142,Matías Silva,10005254-9,matías.silva87@yahoo.com,+56961140376,1996-11-21,Pudahuel,Premium,True
+143,Ignacio Pérez,10005291-8,ignacio.perez4@outlook.com,+56954024257,1987-05-14,Ñuñoa,Basic,True
+144,Daniela Rojas,10005328-K,daniela.rojas90@yahoo.com,+56964800542,1965-03-26,Las Condes,Premium,True
+145,Rodrigo Vargas,10005365-1,rodrigo.vargas64@gmail.com,+56941514326,1999-10-19,San Miguel,Premium,False
+146,Daniela Rojas,10005402-6,daniela.rojas48@outlook.com,+56988831486,1993-04-18,Las Condes,Standard,True
+147,Ignacio Pérez,10005439-4,ignacio.perez79@empresa.cl,+56914391105,1990-12-18,Pudahuel,Premium,False
+148,Daniela Rojas,10005476-1,daniela.rojas31@yahoo.com,+56959302863,1984-06-03,Pudahuel,Premium,False
+149,Valentina Torres,10005513-7,valentina.torres25@gmail.com,+56922304198,1989-09-23,Ñuñoa,Basic,True
+150,Carlos López,10005550-2,carlos.lopez43@hotmail.com,+56985776373,1969-03-16,Providencia,Basic,True
+151,Sofía Araya,10005587-5,sofía.araya28@hotmail.com,+56929804386,1995-05-18,Conchalí,Premium,True
+152,Laura Soto,10005624-4,laura.soto17@outlook.com,+56933420607,1964-12-06,Santiago,Premium,True
+153,Matías Silva,10005661-5,matías.silva31@outlook.com,+56912118101,1967-10-25,Maipú,Premium,True
+154,Sebastián Castro,10005698-1,sebastian.castro68@gmail.com,+56973920651,1980-02-09,Pudahuel,Basic,True
+155,Daniela Rojas,10005735-9,daniela.rojas65@hotmail.com,+56915820356,1992-08-15,San Miguel,Standard,False
+156,Ana García,10005772-6,ana.garcía8@empresa.cl,+56967213476,1990-10-11,Providencia,Standard,False
+157,María Rodríguez,10005809-9,maría.rodríguez11@yahoo.com,+56929909029,1962-12-12,Las Condes,Standard,True
+158,Camila Morales,10005846-4,camila.morales77@outlook.com,+56970896652,1982-09-04,Conchalí,Standard,True
+159,Juan Martínez,10005883-3,juan.martínez84@outlook.com,+56967723010,1980-04-03,Ñuñoa,Standard,True
+160,Daniela Rojas,10005920-1,daniela.rojas52@empresa.cl,+56951949529,1979-02-22,Pudahuel,Basic,True
+161,Matías Silva,10005957-1,matías.silva20@empresa.cl,+56922243983,1997-04-23,Providencia,Premium,False
+162,Juan Martínez,10005994-2,juan.martínez96@yahoo.com,+56984674816,1962-09-09,Conchalí,Basic,True
+163,Juan Martínez,10006031-K,juan.martínez53@yahoo.com,+56966765623,1998-12-09,Santiago,Standard,True
+164,Matías Silva,10006068-8,matías.silva14@outlook.com,+56938553319,1966-12-10,Vitacura,Premium,True
+165,Matías Silva,10006105-1,matías.silva72@yahoo.com,+56947388792,1985-10-02,Ñuñoa,Standard,True
+166,Tomás Espinoza,10006142-0,tomas.espinoza85@yahoo.com,+56934215035,1972-04-04,Maipú,Standard,True
+167,Ana García,10006179-9,ana.garcía24@hotmail.com,+56998227303,1977-12-23,Providencia,Premium,True
+168,María Rodríguez,10006216-3,maría.rodríguez96@outlook.com,+56960491958,1978-10-31,Vitacura,Standard,True
+169,Matías Silva,10006253-9,matías.silva40@yahoo.com,+56990023800,1963-10-23,Santiago,Premium,True
+170,Tomás Espinoza,10006290-4,tomas.espinoza7@gmail.com,+56969473616,1989-09-10,La Florida,Standard,False
+171,Sebastián Castro,10006327-8,sebastian.castro35@hotmail.com,+56925276327,1975-06-26,La Florida,Premium,True
+172,Sofía Araya,10006364-K,sofía.araya63@outlook.com,+56951395350,1962-01-14,Ñuñoa,Standard,True
+173,Ana García,10006401-3,ana.garcía27@yahoo.com,+56928419343,1994-04-12,Maipú,Standard,True
+174,Juan Martínez,10006438-6,juan.martínez1@empresa.cl,+56933581357,1965-10-17,La Florida,Basic,True
+175,Javiera Núñez,10006475-1,javiera.núñez72@yahoo.com,+56963293990,1998-08-28,Santiago,Standard,True
+176,Daniela Rojas,10006512-9,daniela.rojas10@yahoo.com,+56967617561,1985-09-20,La Florida,Basic,False
+177,Rodrigo Vargas,10006549-0,rodrigo.vargas15@empresa.cl,+56953589647,1967-09-16,Conchalí,Standard,True
+178,María Rodríguez,10006586-3,maría.rodríguez56@gmail.com,+56968475513,1986-06-01,La Florida,Basic,True
+179,Camila Morales,10006623-3,camila.morales40@yahoo.com,+56954703713,1994-12-13,Las Condes,Premium,True
+180,Javiera Núñez,10006660-5,javiera.núñez66@hotmail.com,+56957123808,1992-08-17,Las Condes,Premium,True
+181,Laura Soto,10006697-2,laura.soto33@hotmail.com,+56990852623,1966-11-09,Providencia,Premium,False
+182,Daniela Rojas,10006734-9,daniela.rojas97@outlook.com,+56970251043,1990-07-21,Conchalí,Basic,True
+183,Francisca Reyes,10006771-1,francisca.reyes20@empresa.cl,+56972937522,1979-11-02,Maipú,Standard,True
+184,Matías Silva,10006808-4,matías.silva65@gmail.com,+56971974027,1980-04-09,Santiago,Premium,True
+185,Rodrigo Vargas,10006845-9,rodrigo.vargas10@gmail.com,+56989736043,1982-09-29,La Florida,Standard,True
+186,Daniela Rojas,10006882-5,daniela.rojas74@hotmail.com,+56991202508,1981-05-02,San Miguel,Premium,True
+187,Daniela Rojas,10006919-1,daniela.rojas14@yahoo.com,+56977719420,1988-12-25,Las Condes,Premium,True
+188,Daniela Rojas,10006956-8,daniela.rojas57@outlook.com,+56991846696,1967-02-13,Pudahuel,Standard,True
+189,Camila Morales,10006993-K,camila.morales53@yahoo.com,+56990246882,1962-05-07,Pudahuel,Premium,True
+190,Juan Martínez,10007030-4,juan.martínez72@empresa.cl,+56943822301,1992-06-18,Conchalí,Premium,True
+191,María Rodríguez,10007067-5,maría.rodríguez75@hotmail.com,+56951638598,1989-06-05,La Florida,Premium,True
+192,Rodrigo Vargas,10007104-K,rodrigo.vargas72@empresa.cl,+56954087376,1996-06-23,Las Condes,Basic,True
+193,Sebastián Castro,10007141-0,sebastian.castro66@yahoo.com,+56958667035,1973-11-08,Las Condes,Premium,True
+194,Ignacio Pérez,10007178-2,ignacio.perez25@hotmail.com,+56930796389,1963-06-18,Maipú,Premium,True
+195,Francisca Reyes,10007215-2,francisca.reyes99@outlook.com,+56990161060,1976-11-24,Las Condes,Premium,True
+196,Tomás Espinoza,10007252-0,tomas.espinoza22@empresa.cl,+56965144509,1976-05-04,Ñuñoa,Standard,True
+197,Daniela Rojas,10007289-3,daniela.rojas30@outlook.com,+56951536077,1996-04-09,Vitacura,Premium,True
+198,Sofía Araya,10007326-4,sofía.araya57@empresa.cl,+56961254050,1982-07-23,San Miguel,Standard,True
+199,Claudia Herrera,10007363-4,claudia.herrera78@hotmail.com,+56917003454,1988-10-05,Vitacura,Standard,True
+200,Javiera Núñez,10007400-1,javiera.núñez16@yahoo.com,+56931516757,1972-03-27,Vitacura,Basic,True

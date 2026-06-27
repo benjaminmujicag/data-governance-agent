@@ -1,0 +1,51 @@
+empleado_id,nombre,rut,email_corp,cargo,departamento,salario_clp,fecha_ingreso,activo
+1,Pedro Fuentes,8000041-7,pedro.fuentes@retailbank.cl,Compliance Officer,Operaciones,4315606,2022-11-10,True
+2,Matías Silva,8000082-6,matías.silva@retailbank.cl,Jefa de Operaciones,Riesgos,2309020,2021-05-29,True
+3,Sofía Araya,8000123-K,sofía.araya@retailbank.cl,Ingeniero de Software,Tecnología,3064497,2024-01-07,True
+4,Felipe Vega,8000164-6,felipe.vega@retailbank.cl,Compliance Officer,Operaciones,2023425,2023-12-21,True
+5,Ignacio Pérez,8000205-0,ignacio.perez@retailbank.cl,Ejecutivo de Cuenta,Riesgos,4990930,2016-07-04,True
+6,Ignacio Pérez,8000246-4,ignacio.perez@retailbank.cl,Jefa de Operaciones,Cumplimiento,1200214,2019-06-20,True
+7,Pedro Fuentes,8000287-0,pedro.fuentes@retailbank.cl,Ingeniero de Software,Comercial,4797502,2024-05-29,True
+8,Daniela Rojas,8000328-5,daniela.rojas@retailbank.cl,Jefa de Operaciones,Comercial,3822470,2021-04-14,True
+9,Matías Silva,8000369-0,matías.silva@retailbank.cl,Compliance Officer,Tecnología,3745160,2024-09-22,True
+10,Sofía Araya,8000410-9,sofía.araya@retailbank.cl,Ejecutivo de Cuenta,Comercial,3778870,2018-08-24,False
+11,Daniela Rojas,8000451-1,daniela.rojas@retailbank.cl,Compliance Officer,Cumplimiento,3203533,2020-03-14,True
+12,Pedro Fuentes,8000492-K,pedro.fuentes@retailbank.cl,Data Engineer,Riesgos,4195479,2024-07-09,True
+13,María Rodríguez,8000533-2,maría.rodríguez@retailbank.cl,Data Engineer,Operaciones,3429678,2018-07-21,True
+14,Valentina Torres,8000574-9,valentina.torres@retailbank.cl,Compliance Officer,Comercial,4532078,2023-10-04,True
+15,Sofía Araya,8000615-8,sofía.araya@retailbank.cl,Auditor Interno,Riesgos,2203566,2017-01-23,True
+16,Laura Soto,8000656-3,laura.soto@retailbank.cl,Jefa de Operaciones,Tecnología,2566401,2016-11-14,False
+17,Juan Martínez,8000697-1,juan.martínez@retailbank.cl,Gerente de Sucursal,Riesgos,1251520,2015-04-18,False
+18,Javiera Núñez,8000738-1,javiera.núñez@retailbank.cl,Gerente de Sucursal,Comercial,2102535,2015-12-12,False
+19,Rodrigo Vargas,8000779-3,rodrigo.vargas@retailbank.cl,Ingeniero de Software,Comercial,4517499,2022-01-10,True
+20,Laura Soto,8000820-8,laura.soto@retailbank.cl,Ejecutivo de Cuenta,Tecnología,1094901,2022-06-10,True
+21,Francisca Reyes,8000861-7,francisca.reyes@retailbank.cl,Auditor Interno,Cumplimiento,3085177,2021-02-24,False
+22,Laura Soto,8000902-8,laura.soto@retailbank.cl,Ejecutivo de Cuenta,Cumplimiento,4629763,2022-01-28,False
+23,Javiera Núñez,8000943-K,javiera.núñez@retailbank.cl,Jefa de Operaciones,Comercial,4840387,2021-01-19,True
+24,María Rodríguez,8000984-7,maría.rodríguez@retailbank.cl,Jefa de Operaciones,Comercial,4257816,2017-11-30,True
+25,Rodrigo Vargas,8001025-0,rodrigo.vargas@retailbank.cl,Analista de Datos,Cumplimiento,1943371,2018-11-09,True
+26,Ignacio Pérez,8001066-8,ignacio.perez@retailbank.cl,Analista de Datos,Riesgos,4801928,2018-05-12,True
+27,Sebastián Castro,8001107-4,sebastian.castro@retailbank.cl,Ingeniero de Software,Tecnología,3934352,2017-02-11,False
+28,Felipe Vega,8001148-6,felipe.vega@retailbank.cl,Compliance Officer,Operaciones,2169603,2023-01-07,False
+29,Camila Morales,8001189-3,camila.morales@retailbank.cl,Jefa de Operaciones,Tecnología,4342000,2022-01-05,True
+30,Javiera Núñez,8001230-9,javiera.núñez@retailbank.cl,Jefa de Operaciones,Comercial,3055042,2019-08-19,True
+31,María Rodríguez,8001271-2,maría.rodríguez@retailbank.cl,Ejecutivo de Cuenta,Comercial,1725736,2022-02-21,False
+32,Tomás Espinoza,8001312-7,tomas.espinoza@retailbank.cl,Jefa de Operaciones,Cumplimiento,4927161,2017-02-08,True
+33,Ana García,8001353-2,ana.garcía@retailbank.cl,Analista de Datos,Cumplimiento,985647,2017-01-31,True
+34,Rodrigo Vargas,8001394-4,rodrigo.vargas@retailbank.cl,Ejecutivo de Cuenta,Riesgos,868820,2017-08-11,True
+35,Laura Soto,8001435-0,laura.soto@retailbank.cl,Auditor Interno,Operaciones,3668172,2019-09-18,True
+36,Ignacio Pérez,8001476-5,ignacio.perez@retailbank.cl,Auditor Interno,Tecnología,3570326,2015-11-25,True
+37,Carlos López,8001517-4,carlos.lopez@retailbank.cl,Compliance Officer,Tecnología,4743877,2017-01-13,True
+38,Valentina Torres,8001558-6,valentina.torres@retailbank.cl,Analista de Datos,Tecnología,2888447,2019-04-26,False
+39,Diego Muñoz,8001599-0,diego.muñoz@retailbank.cl,Ingeniero de Software,Riesgos,1588196,2020-11-04,True
+40,Ignacio Pérez,8001640-6,ignacio.perez@retailbank.cl,Jefa de Operaciones,Comercial,2130529,2022-01-21,True
+41,Felipe Vega,8001681-8,felipe.vega@retailbank.cl,Gerente de Sucursal,Comercial,4836846,2022-02-28,True
+42,Claudia Herrera,8001722-5,claudia.herrera@retailbank.cl,Analista de Datos,Operaciones,1747312,2017-08-24,False
+43,Francisca Reyes,8001763-0,francisca.reyes@retailbank.cl,Ejecutivo de Cuenta,Comercial,1803693,2019-06-10,True
+44,Ana García,8001804-0,ana.garcía@retailbank.cl,Auditor Interno,Cumplimiento,2100166,2019-03-02,True
+45,Diego Muñoz,8001845-2,diego.muñoz@retailbank.cl,Auditor Interno,Tecnología,3638890,2025-06-09,True
+46,Carlos López,8001886-5,carlos.lopez@retailbank.cl,Ejecutivo de Cuenta,Cumplimiento,1700866,2016-05-30,False
+47,Diego Muñoz,8001927-5,diego.muñoz@retailbank.cl,Data Engineer,Riesgos,2418710,2015-03-29,False
+48,Matías Silva,8001968-2,matías.silva@retailbank.cl,Jefa de Operaciones,Tecnología,4871009,2022-12-04,False
+49,Felipe Vega,8002009-4,felipe.vega@retailbank.cl,Auditor Interno,Operaciones,2365538,2021-02-04,True
+50,Francisca Reyes,8002050-7,francisca.reyes@retailbank.cl,Jefa de Operaciones,Cumplimiento,2145058,2015-10-10,True

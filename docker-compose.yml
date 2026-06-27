@@ -1,0 +1,14 @@
+# Levanta una base PostgreSQL con la extensión pgVector ya incluida.
+# Uso: docker compose up -d   (apagar: docker compose down)
+services:
+  db:
+    image: pgvector/pgvector:pg16   # Postgres 16 + extensión pgvector preinstalada
+    container_name: gobernanza-db
+    environment:
+      POSTGRES_DB: gobernanza
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"                 # expone la DB en tu localhost:5432
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data   # persiste los datos entre reinicios

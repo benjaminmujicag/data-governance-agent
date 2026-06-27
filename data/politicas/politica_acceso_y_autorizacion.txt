@@ -1,0 +1,74 @@
+POLÍTICA DE CONTROL DE ACCESO Y AUTORIZACIÓN A DATOS
+FinCorp S.A. — Versión 2.0 — Vigente desde: 01/06/2025
+Responsable: Seguridad de la Información + Gerencia de Datos | Aprobado por: CISO
+
+1. OBJETIVO
+Regular quién puede acceder a qué datos, bajo qué condiciones y mediante qué proceso de
+autorización, asegurando el principio de mínimo privilegio y dejando trazabilidad completa
+de los accesos a datos sensibles de FinCorp S.A.
+
+2. PRINCIPIOS FUNDAMENTALES
+a) MÍNIMO PRIVILEGIO: cada usuario o sistema accede solo a los datos estrictamente necesarios
+   para cumplir su función. Ningún rol tiene acceso irrestricto por defecto.
+b) NECESIDAD DE SABER (Need to Know): el acceso se justifica con un caso de uso concreto y
+   documentado, no por jerarquía o antigüedad.
+c) SEGREGACIÓN DE FUNCIONES: los responsables de aprobar accesos no pueden ser los mismos
+   que los solicitan o los usan.
+d) TRAZABILIDAD: todo acceso a datos clasificados como CONFIDENCIAL o RESTRINGIDO genera un
+   log de auditoría imborrable con: usuario, timestamp, objeto accedido, operación realizada.
+
+3. ROLES Y NIVELES DE ACCESO
+
+3.1 ROL ANALISTA DE DATOS
+- Acceso a datos de nivel INTERNO y PÚBLICO.
+- Acceso a datos CONFIDENCIALES solo a través de vistas anonimizadas o seudonimizadas.
+- No accede a datos RESTRINGIDOS bajo ningún escenario.
+- Requiere: solicitud en sistema GovAccess, aprobación del Data Owner del área.
+
+3.2 ROL CIENTÍFICO DE DATOS / ML ENGINEER
+- Acceso a conjuntos de datos de entrenamiento previamente aprobados y anonimizados.
+- Para trabajar con datos reales en desarrollo: usar ambiente sandbox con datos sintéticos
+  o datos enmascarados. Prohibido usar datos de producción con PII en notebooks locales.
+- Acceso excepcional a datos CONFIDENCIALES en producción: requiere aprobación CISO + DPO.
+
+3.3 ROL INGENIERO DE DATOS / DBA
+- Acceso estructural (esquemas, DDL) a todas las bases de datos de su dominio asignado.
+- Acceso a contenido de datos CONFIDENCIALES en producción solo para tareas de mantenimiento
+  crítico, con ventana de tiempo definida (máx. 4 horas) y monitoreo en tiempo real.
+- Prohibido exportar datos de producción sin autorización expresa.
+
+3.4 ROL DATA OWNER
+- Acceso completo a los datos de su dominio para fines de supervisión y gestión.
+- Responsable de aprobar o rechazar todas las solicitudes de acceso a sus datos.
+- Debe revisar y certificar los accesos vigentes de su dominio cada 6 meses (Access Review).
+
+3.5 ROL DPO (Oficial de Protección de Datos)
+- Acceso de auditoría (read-only) a todos los sistemas que contengan datos personales.
+- Puede solicitar logs y evidencias de cumplimiento a cualquier área.
+
+4. PROCESO DE SOLICITUD DE ACCESO
+Paso 1: El solicitante ingresa una solicitud en el sistema GovAccess con:
+        - Datos solicitados (tabla, base de datos, sistema).
+        - Propósito del acceso (caso de uso específico).
+        - Duración requerida (acceso temporal o permanente).
+Paso 2: El Data Owner evalúa y aprueba/rechaza en un plazo máximo de 3 días hábiles.
+Paso 3: Para datos CONFIDENCIALES o RESTRINGIDOS, aprobación adicional del CISO o DPO.
+Paso 4: El área de IT implementa el acceso y lo registra en el inventario de accesos.
+Paso 5: Se notifica al solicitante con las condiciones de uso y restricciones aplicables.
+
+5. REVOCACIÓN DE ACCESOS
+- Al término o cambio de rol de un empleado: revocación en 24 horas (crítico) o 5 días hábiles.
+- Accesos temporales: se revocan automáticamente al vencer la fecha acordada.
+- Ante incidente de seguridad: revocación inmediata por el CISO sin necesidad de aprobación.
+
+6. ACCESOS DE SISTEMAS Y APLICACIONES (no humanos)
+Las aplicaciones, pipelines y APIs acceden a datos mediante cuentas de servicio dedicadas:
+- Una cuenta de servicio por sistema/aplicación (no compartidas).
+- Secretos gestionados en Vault o Secret Manager (prohibido en código fuente o archivos .env
+  en repositorios compartidos o públicos).
+- Rotación de credenciales mínimo cada 90 días.
+
+7. ACCESS REVIEW SEMESTRAL
+Cada 6 meses, el área de Datos publica el reporte de accesos vigentes por dominio. Los Data
+Owners deben certificar o revocar cada acceso. Los accesos no certificados se revocan
+automáticamente al cierre del proceso.

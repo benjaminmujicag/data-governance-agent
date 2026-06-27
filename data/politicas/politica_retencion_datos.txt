@@ -1,0 +1,69 @@
+POLÍTICA DE RETENCIÓN Y ELIMINACIÓN DE DATOS
+FinCorp S.A. — Versión 1.8 — Vigente desde: 01/01/2025
+Responsable: Gerencia de Datos y Analítica | Revisado por: Legal y Cumplimiento
+
+1. OBJETIVO
+Definir los plazos máximos de retención para cada categoría de datos gestionados por FinCorp
+S.A., así como los procesos de eliminación segura, en cumplimiento de la Ley 21.719, normativa
+financiera de la CMF y obligaciones tributarias del SII.
+
+2. PRINCIPIO GENERAL
+Los datos no deben conservarse más tiempo del necesario para el fin que justificó su recopilación.
+Una vez vencido el plazo de retención, los datos deben ser eliminados de forma irreversible o
+anonimizados permanentemente, salvo que exista obligación legal expresa de conservación.
+
+3. PLAZOS DE RETENCIÓN POR CATEGORÍA
+
+3.1 DATOS DE CLIENTES (personas naturales)
+- Datos de identificación (RUT, nombre, dirección, contacto): 10 años desde el término de la
+  relación comercial. Fundamento: Art. 97 Código Tributario; normativa CMF sobre historial.
+- Datos de transacciones financieras (montos, fechas, cuentas): 10 años. Fundamento: misma base.
+- Datos de comunicaciones y soporte (llamadas grabadas, chats): 3 años desde la interacción.
+- Consentimientos de marketing y su historial: 5 años desde la última actividad de marketing.
+- Datos de comportamiento de uso digital (logs de app, web): 12 meses desde la generación.
+
+3.2 DATOS DE EMPLEADOS
+- Contrato de trabajo y datos de nómina: 5 años desde el término de la relación laboral.
+  Fundamento: Art. 480 Código del Trabajo (prescripción de acciones laborales).
+- Registros de evaluación de desempeño: 3 años.
+- Datos de capacitaciones obligatorias (SERNAC, UAF, etc.): 5 años.
+- Datos de salud o licencias médicas: 5 años (acceso restringido a RRHH y Legal).
+
+3.3 DATOS OPERACIONALES Y LOGS DE SISTEMAS
+- Logs de seguridad y accesos a sistemas: 24 meses. Fundamento: ISO 27001; normativa CMF.
+- Logs de auditoría de bases de datos (quién accedió, qué modificó): 36 meses.
+- Backups de bases de datos: retención máxima de 30 días para backups diarios; 12 meses
+  para backups mensuales.
+- Logs de API y llamadas a servicios: 90 días.
+
+3.4 DATOS DE PREVENCIÓN DE LAVADO DE DINERO (UAF)
+- Reportes de operaciones sospechosas (ROS) y toda la documentación de respaldo: mínimo
+  10 años desde la fecha del reporte, conforme a Ley 19.913 y circulares UAF.
+- Registros KYC (Know Your Customer): 10 años desde el fin de la relación con el cliente.
+
+3.5 DATOS DE INVESTIGACIÓN Y ANALÍTICA
+- Datasets de modelos de ML/IA en producción: retener mientras el modelo esté en uso + 2 años.
+- Datasets de entrenamiento: eliminar o anonimizar al cumplirse 3 años desde el último uso.
+- Resultados de análisis de riesgo y scoring: 5 años.
+
+4. ELIMINACIÓN SEGURA
+4.1 Datos digitales: borrado criptográfico (crypto-shredding) para almacenamiento cifrado;
+    sobreescritura conforme a NIST 800-88 para discos.
+4.2 Datos físicos: destrucción certificada por empresa autorizada.
+4.3 Datos en cloud y sistemas de terceros: debe exigirse al proveedor certificado de eliminación
+    o confirmación escrita de supresión, dentro del plazo contractual.
+
+5. PROCESO DE ELIMINACIÓN
+a) El área de Datos envía trimestralmente un reporte de activos próximos a vencer al Data Owner.
+b) El Data Owner confirma la eliminación o justifica una extensión excepcional (máx. 12 meses
+   adicionales con aprobación de Legal).
+c) La eliminación se registra en el Catálogo de Datos como evidencia de cumplimiento.
+d) Los datos no pueden retenerse más allá del plazo máximo bajo ningún argumento de "utilidad futura"
+   sin nueva base legal.
+
+6. EXCEPCIONES
+Se admite retención extendida únicamente en los siguientes casos:
+- Orden judicial o requerimiento de autoridad competente (TDLC, CMF, Ministerio Público).
+- Litigio activo en el que los datos son evidencia relevante.
+- Investigación interna formal aprobada por Legal.
+En todos los casos, el Data Owner debe documentar la excepción en el sistema de gestión de datos.

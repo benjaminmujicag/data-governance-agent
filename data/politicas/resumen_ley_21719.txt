@@ -1,0 +1,142 @@
+RESUMEN DE LA LEY 21.719 — LEY DE PROTECCIÓN DE DATOS PERSONALES (CHILE)
+Documento de referencia para el agente de gobernanza — FinCorp S.A.
+Fuente: Texto promulgado en el Diario Oficial, Chile. Vigencia: escalonada desde 2026.
+
+NOTA: Este resumen sintetiza los artículos más relevantes para la operación de FinCorp S.A.
+No reemplaza la consulta del texto legal oficial disponible en el Diario Oficial o BCN.
+
+--- TÍTULO I: DISPOSICIONES GENERALES ---
+
+Art. 1 — OBJETO DE LA LEY
+La ley tiene por objeto regular el tratamiento de los datos personales de las personas
+naturales realizado por personas naturales o jurídicas, públicas o privadas, y establecer
+los derechos de los titulares y las obligaciones de los responsables y encargados de
+tratamiento.
+
+Art. 2 — DEFINICIONES CLAVE
+- Dato personal: toda información relativa a una persona natural identificada o identificable.
+- Dato sensible: datos que revelan origen racial o étnico, situación socioeconómica, información
+  sobre la salud, datos biométricos con fines identificatorios, datos sobre vida u orientación
+  sexual, opiniones políticas, convicciones religiosas o filosóficas, afiliación sindical, datos
+  relativos a condenas penales o infracciones administrativas. Requieren protección reforzada.
+- Tratamiento: cualquier operación sobre datos personales (recolección, almacenamiento, uso,
+  cesión, transferencia, eliminación, etc.).
+- Responsable del tratamiento: quien decide el propósito y los medios del tratamiento.
+- Encargado del tratamiento: quien trata los datos por cuenta del responsable (proveedor, API, nube).
+- Anonimización: proceso irreversible que impide identificar al titular.
+- Seudonimización: sustituir identificadores por seudónimos de forma reversible con clave separada.
+
+Art. 3 — PRINCIPIOS DE TRATAMIENTO
+Todo tratamiento debe cumplir: licitud, lealtad, transparencia, finalidad (específica y explícita),
+proporcionalidad (solo datos necesarios), calidad (exactos y actualizados), seguridad,
+responsabilidad proactiva. Principio de PRIVACIDAD POR DISEÑO: la protección debe integrarse
+desde el diseño del sistema, no añadirse después.
+
+--- TÍTULO II: LICITUD DEL TRATAMIENTO ---
+
+Art. 12 — BASES DE LICITUD
+El tratamiento de datos personales solo es lícito si se funda en alguna de las siguientes bases:
+a) CONSENTIMIENTO del titular, libre, informado, específico e inequívoco.
+b) EJECUCIÓN DE UN CONTRATO en el que el titular es parte.
+c) CUMPLIMIENTO DE OBLIGACIÓN LEGAL del responsable.
+d) PROTECCIÓN DEL INTERÉS VITAL del titular o de terceros.
+e) MISIÓN DE INTERÉS PÚBLICO o ejercicio de poderes públicos.
+f) INTERÉS LEGÍTIMO del responsable o de un tercero, siempre que no prevalezcan los intereses
+   del titular. Requiere evaluación documentada (balancing test).
+
+Art. 16 — DATOS SENSIBLES
+El tratamiento de datos sensibles está prohibido como regla general. Solo es lícito cuando:
+- El titular otorgó consentimiento explícito.
+- Es necesario para proteger intereses vitales del titular.
+- Proviene de tratamiento necesario para fines de medicina preventiva, diagnóstico médico o
+  prestación de atención sanitaria.
+- Es necesario por razones de interés público significativo (con base legal).
+Prohibición expresa: usar datos sensibles para tomar decisiones automatizadas que produzcan
+efectos jurídicos sin revisión humana.
+
+--- TÍTULO III: DERECHOS DE LOS TITULARES ---
+
+Art. 22 — DERECHO DE ACCESO
+El titular tiene derecho a obtener del responsable confirmación de si se tratan o no sus datos,
+y en caso afirmativo, acceso a ellos, incluyendo: finalidad del tratamiento, categorías de datos,
+destinatarios, plazo de conservación, origen de los datos.
+
+Art. 24 — DERECHO DE RECTIFICACIÓN
+El titular puede exigir la corrección de datos inexactos o incompletos. El responsable debe
+rectificar en un plazo máximo de 10 días hábiles.
+
+Art. 25 — DERECHO DE SUPRESIÓN (DERECHO AL OLVIDO)
+El titular puede solicitar la eliminación de sus datos cuando: ya no son necesarios para el fin;
+se revocó el consentimiento y no hay otra base legal; el tratamiento es ilícito.
+El responsable tiene 10 días hábiles para ejecutar la supresión, salvo obligación legal de
+conservación.
+
+Art. 26 — DERECHO DE OPOSICIÓN
+El titular puede oponerse al tratamiento en cualquier momento cuando la base es el interés
+legítimo o el interés público. El responsable debe cesar el tratamiento a menos que acredite
+motivos imperiosos que prevalezcan sobre los intereses del titular.
+
+Art. 27 — DERECHO A LA PORTABILIDAD
+El titular tiene derecho a recibir sus datos en formato estructurado, de uso común y lectura
+mecánica, y a transmitirlos a otro responsable cuando el tratamiento se basa en consentimiento
+o contrato y se realiza por medios automatizados.
+
+Art. 33 — NO SER OBJETO DE DECISIONES AUTOMATIZADAS
+El titular tiene derecho a no ser objeto de una decisión basada únicamente en el tratamiento
+automatizado de datos, incluida la elaboración de perfiles, que produzca efectos jurídicos
+significativos o le afecte de modo similar. El responsable debe garantizar la intervención
+humana, el derecho a expresar el punto de vista del titular y a impugnar la decisión.
+
+--- TÍTULO IV: OBLIGACIONES DEL RESPONSABLE ---
+
+Art. 41 — REGISTRO DE ACTIVIDADES DE TRATAMIENTO
+Los responsables de tratamiento deben mantener un registro actualizado de sus actividades de
+tratamiento que incluya: categorías de datos, finalidad, destinatarios, plazos de retención,
+medidas de seguridad. Este registro es el "inventario de datos" o "data catalog" de cumplimiento.
+
+Art. 44 — EVALUACIÓN DE IMPACTO EN PRIVACIDAD (PIA / DPIA)
+Obligatoria cuando el tratamiento pueda suponer un alto riesgo para los titulares, especialmente:
+- Tratamiento a gran escala de datos sensibles.
+- Evaluación sistemática y exhaustiva de aspectos personales (perfilamiento).
+- Toma de decisiones automatizadas con efectos jurídicos.
+La PIA debe documentar: descripción del tratamiento, evaluación de riesgos, medidas mitigadoras.
+
+Art. 48 — ENCARGADO DE TRATAMIENTO (PROVEEDORES)
+Cuando el responsable contrata a un encargado (proveedor de nube, API de IA, etc.) debe celebrar
+un contrato de encargo de tratamiento que establezca: instrucciones del responsable, medidas de
+seguridad, prohibición de subcontratación sin autorización, obligación de devolver o destruir
+datos al término del contrato.
+
+--- TÍTULO V: SEGURIDAD Y BRECHAS ---
+
+Art. 49 — MEDIDAS DE SEGURIDAD
+El responsable debe implementar medidas técnicas y organizativas apropiadas según el estado de
+la tecnología, los costos y la naturaleza de los datos. Incluye: cifrado, seudonimización,
+control de acceso, resiliencia, recuperación ante incidentes.
+
+Art. 52 — NOTIFICACIÓN DE BRECHAS DE SEGURIDAD
+Cuando ocurra una brecha que pueda suponer riesgo para los titulares:
+- El responsable notifica al Consejo para la Transparencia en un plazo no superior a 72 horas.
+- Si hay alto riesgo para los titulares, se les notifica sin dilación indebida.
+- La notificación incluye: naturaleza de la brecha, categorías de datos afectados, número
+  aproximado de titulares, probable impacto, medidas adoptadas o propuestas.
+
+--- TÍTULO VI: AUTORIDAD DE CONTROL ---
+
+Art. 55 — CONSEJO PARA LA TRANSPARENCIA (AUTORIDAD DE CONTROL)
+El Consejo para la Transparencia es la autoridad de control independiente. Sus facultades:
+- Fiscalizar el cumplimiento de la ley.
+- Imponer sanciones.
+- Emitir instrucciones y orientaciones.
+- Resolver reclamaciones de titulares.
+
+Art. 60 — SANCIONES
+Las infracciones se clasifican en leves, graves y gravísimas. Las sanciones van desde multas
+de 100 UTM (leve) hasta 10.000 UTM (gravísima) o hasta el 4% del ingreso anual global del
+infractor, aplicando el monto mayor. Las infracciones gravísimas incluyen: tratamiento sin
+base de licitud de datos sensibles, ceder datos sin autorización, no notificar brechas.
+
+--- DISPOSICIONES TRANSITORIAS ---
+- Entrada en vigencia gradual: 24 meses desde publicación para adecuación de los responsables.
+- Período de adecuación: FinCorp S.A. debe tener registro de actividades, PIA de sistemas
+  críticos y contratos de encargo actualizados antes del vencimiento del período transitorio.

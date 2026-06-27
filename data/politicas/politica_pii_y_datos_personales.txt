@@ -1,0 +1,86 @@
+POLÍTICA DE TRATAMIENTO DE DATOS PERSONALES Y PII
+FinCorp S.A. — Versión 2.4 — Vigente desde: 15/04/2025
+Responsable: Oficial de Protección de Datos (DPO) | Aprobado por: Gerencia General
+
+1. OBJETIVO
+Regular la recolección, almacenamiento, procesamiento, transferencia y eliminación de datos
+personales e información de identificación personal (PII) en FinCorp S.A., en cumplimiento
+estricto de la Ley 21.719 de Protección de Datos Personales de Chile.
+
+2. DEFINICIÓN DE DATOS PERSONALES Y PII
+Se consideran datos personales toda información que identifique o permita identificar a una
+persona natural, directa o indirectamente. En FinCorp S.A. se reconocen las siguientes
+categorías de PII:
+
+2.1 PII DIRECTA (identifica por sí sola):
+- RUT / número de cédula de identidad
+- Nombre completo
+- Número de pasaporte
+- Dirección de correo electrónico personal
+- Número de teléfono móvil o fijo personal
+- Número de cuenta bancaria o tarjeta de crédito
+
+2.2 PII INDIRECTA (puede identificar en combinación):
+- Fecha de nacimiento
+- Dirección domiciliaria
+- Código postal / región / ciudad
+- IP de dispositivo personal
+- Datos de geolocalización
+
+2.3 DATOS SENSIBLES (protección reforzada, Art. 16 Ley 21.719):
+- Datos de salud y registros médicos
+- Origen étnico o racial
+- Opiniones políticas o afiliación sindical
+- Creencias religiosas o filosóficas
+- Datos biométricos con fin identificatorio
+- Datos sobre vida u orientación sexual
+- Antecedentes penales o infracciones
+
+3. PRINCIPIOS DE TRATAMIENTO
+Todo tratamiento de datos personales en FinCorp S.A. debe cumplir los siguientes principios
+(Art. 3, Ley 21.719):
+a) LICITUD: debe existir base legal válida (consentimiento, contrato, obligación legal,
+   interés legítimo o interés vital).
+b) FINALIDAD: los datos se recopilan para fines específicos, explícitos y legítimos; no pueden
+   usarse para fines incompatibles sin nuevo consentimiento.
+c) PROPORCIONALIDAD: solo se recopilan los datos estrictamente necesarios para el fin declarado.
+d) CALIDAD: los datos deben ser exactos, actualizados y pertinentes.
+e) SEGURIDAD: medidas técnicas y organizativas apropiadas al nivel de riesgo.
+f) RESPONSABILIDAD PROACTIVA: FinCorp S.A. es capaz de demostrar cumplimiento en todo momento.
+
+4. BASES DE LICITUD HABILITANTES
+Para tratar datos personales de clientes se requiere al menos una de las siguientes bases:
+- Consentimiento explícito (registrado en plataforma con timestamp y versión de aviso).
+- Ejecución de contrato (datos necesarios para prestar el servicio contratado).
+- Obligación legal (reporte a CMF, SII, UAF, etc.).
+- Interés legítimo (prevención de fraude), sujeto a evaluación de impacto (PIA).
+
+5. USOS PROHIBIDOS
+Está expresamente prohibido:
+- Usar datos de clientes para marketing sin consentimiento explícito previo.
+- Ceder o transferir datos personales a terceros sin cláusula de encargo de tratamiento firmada.
+- Almacenar datos sensibles en sistemas sin cifrado aprobado por Seguridad de la Información.
+- Usar el RUT o datos de identificación en ambientes de desarrollo o pruebas sin seudonimización.
+- Realizar perfilamiento automatizado con efectos jurídicos significativos sin revisión humana.
+
+6. DERECHOS DE LOS TITULARES (Arts. 22–36, Ley 21.719)
+Los clientes, empleados y cualquier titular tienen los siguientes derechos:
+- Acceso: saber qué datos se tienen y para qué.
+- Rectificación: corregir datos inexactos o incompletos.
+- Supresión (derecho al olvido): eliminar datos cuando no existe base legal vigente.
+- Portabilidad: recibir los datos en formato estructurado y legible.
+- Oposición: oponerse al tratamiento, especialmente para marketing directo.
+- No ser objeto de decisiones automatizadas exclusivas sin revisión humana.
+Los plazos de respuesta no pueden superar 30 días hábiles (prorrogables por 15 días adicionales).
+
+7. GESTIÓN DE INCIDENTES
+Toda brecha de seguridad que afecte datos personales debe reportarse al DPO en un máximo de
+24 horas desde su detección. Si la brecha implica riesgo para los titulares, se notifica al
+Consejo para la Transparencia (autoridad de control) en un máximo de 72 horas (Art. 52, Ley 21.719).
+
+8. ACCESO A DATOS PERSONALES
+El acceso a bases de datos con PII requiere:
+a) Autorización del Data Owner correspondiente.
+b) Justificación de negocio documentada.
+c) Firma de acuerdo de confidencialidad vigente.
+d) Capacitación en protección de datos completada en el año en curso.

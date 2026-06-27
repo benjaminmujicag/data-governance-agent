@@ -1,0 +1,61 @@
+producto_id,nombre,categoria,precio_clp,stock,activo,proveedor_id
+P0001,Smartphone v1,Electrónica,127994.0,392,True,PROV003
+P0002,Smartphone v2,Electrónica,142340.0,448,False,PROV009
+P0003,Smartphone v3,Electrónica,95311.0,363,True,PROV019
+P0004,Laptop v1,Electrónica,261738.0,266,True,PROV013
+P0005,Laptop v2,Electrónica,327609.0,352,True,PROV014
+P0006,Laptop v3,Electrónica,181763.0,79,False,PROV019
+P0007,Tablet v1,Electrónica,127553.0,437,False,PROV019
+P0008,Tablet v2,Electrónica,183446.0,141,False,PROV007
+P0009,Tablet v3,Electrónica,207191.0,401,False,PROV006
+P0010,Auriculares v1,Electrónica,185726.0,284,False,PROV009
+P0011,Auriculares v2,Electrónica,494256.0,295,True,PROV013
+P0012,Auriculares v3,Electrónica,368145.0,437,True,PROV008
+P0013,Smartwatch v1,Electrónica,223841.0,358,True,PROV004
+P0014,Smartwatch v2,Electrónica,108005.0,205,True,PROV018
+P0015,Smartwatch v3,Electrónica,307389.0,350,True,PROV006
+P0016,Polera v1,Ropa,195153.0,325,True,PROV003
+P0017,Polera v2,Ropa,411794.0,241,False,PROV003
+P0018,Polera v3,Ropa,32966.0,113,True,PROV003
+P0019,Pantalón v1,Ropa,304895.0,370,False,PROV013
+P0020,Pantalón v2,Ropa,307359.0,266,True,PROV020
+P0021,Pantalón v3,Ropa,29664.0,396,True,PROV016
+P0022,Chaqueta v1,Ropa,220037.0,103,True,PROV007
+P0023,Chaqueta v2,Ropa,17761.0,306,True,PROV020
+P0024,Chaqueta v3,Ropa,85562.0,18,True,PROV008
+P0025,Zapatillas v1,Ropa,327845.0,499,True,PROV003
+P0026,Zapatillas v2,Ropa,498402.0,399,False,PROV012
+P0027,Zapatillas v3,Ropa,335151.0,207,True,PROV017
+P0028,Calcetines v1,Ropa,8658.0,360,True,PROV003
+P0029,Calcetines v2,Ropa,275237.0,371,True,PROV012
+P0030,Calcetines v3,Ropa,481671.0,141,True,PROV020
+P0031,Yogurt v1,Alimentos,481556.0,232,False,PROV019
+P0032,Yogurt v2,Alimentos,3311.0,89,False,PROV017
+P0033,Yogurt v3,Alimentos,54116.0,37,True,PROV011
+P0034,Pan integral v1,Alimentos,473551.0,411,True,PROV018
+P0035,Pan integral v2,Alimentos,406751.0,294,True,PROV015
+P0036,Pan integral v3,Alimentos,483052.0,288,False,PROV008
+P0037,Jugo natural v1,Alimentos,378969.0,492,False,PROV015
+P0038,Jugo natural v2,Alimentos,448355.0,441,True,PROV016
+P0039,Jugo natural v3,Alimentos,59008.0,34,False,PROV008
+P0040,Café molido v1,Alimentos,338770.0,117,True,PROV014
+P0041,Café molido v2,Alimentos,477757.0,264,True,PROV009
+P0042,Café molido v3,Alimentos,124871.0,47,False,PROV011
+P0043,Granola v1,Alimentos,38928.0,476,True,PROV016
+P0044,Granola v2,Alimentos,157613.0,111,True,PROV006
+P0045,Granola v3,Alimentos,473602.0,349,True,PROV016
+P0046,Paracetamol v1,Farmacia,368809.0,120,True,PROV009
+P0047,Paracetamol v2,Farmacia,104173.0,103,True,PROV020
+P0048,Paracetamol v3,Farmacia,178648.0,398,True,PROV004
+P0049,Ibuprofeno v1,Farmacia,460164.0,346,False,PROV020
+P0050,Ibuprofeno v2,Farmacia,4295.0,438,True,PROV016
+P0051,Ibuprofeno v3,Farmacia,186217.0,161,False,PROV019
+P0052,Vitamina C v1,Farmacia,434506.0,251,True,PROV017
+P0053,Vitamina C v2,Farmacia,140843.0,113,True,PROV002
+P0054,Vitamina C v3,Farmacia,263332.0,216,False,PROV018
+P0055,Protector solar v1,Farmacia,17239.0,177,False,PROV006
+P0056,Protector solar v2,Farmacia,229131.0,61,False,PROV011
+P0057,Protector solar v3,Farmacia,344906.0,6,True,PROV013
+P0058,Mascarilla v1,Farmacia,290913.0,166,True,PROV020
+P0059,Mascarilla v2,Farmacia,431049.0,95,True,PROV008
+P0060,Mascarilla v3,Farmacia,135425.0,490,True,PROV012

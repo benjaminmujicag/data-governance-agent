@@ -1,0 +1,21 @@
+# --- Núcleo del agente / LLM ---
+google-genai            # SDK oficial de Gemini (LLM + embeddings)
+# openai                # descomentar si cambias de proveedor (diseño intercambiable)
+
+# --- Base vectorial (Postgres + pgVector) ---
+psycopg[binary]         # driver Postgres
+pgvector                # tipo vector para Postgres desde Python
+
+# --- Datos / perfilado ---
+pandas                  # manipulación y perfilado de tablas
+openpyxl                # leer Excel (.xlsx) en conectores
+
+# --- API y UI ---
+fastapi                 # API HTTP del agente
+uvicorn[standard]       # servidor para FastAPI
+httpx                   # cliente HTTP para tests de la API (scripts/test_api.py)
+streamlit               # UI mínima para la demo
+
+# --- Utilidades ---
+python-dotenv           # cargar variables desde .env
+pydantic-settings       # configuración tipada

@@ -1,0 +1,69 @@
+POLÍTICA DE CLASIFICACIÓN DE DATOS
+FinCorp S.A. — Versión 3.1 — Vigente desde: 01/03/2025
+Responsable: Gerencia de Datos y Analítica | Aprobado por: Directorio
+
+1. OBJETIVO
+Establecer un marco uniforme para clasificar los datos que gestiona FinCorp S.A., de modo que
+cada activo de información reciba el nivel de protección adecuado a su sensibilidad y valor,
+en cumplimiento de la Ley 21.719 y los estándares internos de gobernanza.
+
+2. ALCANCE
+Aplica a todos los datos en custodia de FinCorp S.A., independientemente del soporte (digital o
+físico), del sistema que los aloje (on-premise, cloud o terceros) y del área que los genere o
+consuma. Incluye datos de clientes, empleados, proveedores y datos de operación.
+
+3. CATEGORÍAS DE CLASIFICACIÓN
+
+3.1 PÚBLICA
+Información cuya divulgación no genera daño a la organización ni a terceros. Puede compartirse
+sin restricciones. Ejemplos: comunicados de prensa, tarifas publicadas, información del sitio web,
+informes anuales de libre acceso.
+
+3.2 INTERNA
+Información de uso exclusivo dentro de FinCorp S.A. Su divulgación al exterior podría causar
+un daño menor o moderado. Requiere autenticación para acceder. Ejemplos: manuales de proceso,
+presentaciones internas, reportes de gestión no públicos, directorios corporativos.
+
+3.3 CONFIDENCIAL
+Información cuya divulgación podría causar daño significativo a la organización o a terceros.
+Requiere cifrado en reposo y en tránsito, registro de accesos y autorización explícita del Data
+Owner. Ejemplos: datos de clientes (nombre, RUT, cuenta), modelos de riesgo, contratos, datos
+de negociación, información financiera no publicada.
+
+3.4 RESTRINGIDA
+Información de máxima sensibilidad. Su exposición puede implicar sanciones legales, daño
+reputacional grave o impacto sistémico. Solo acceden roles autorizados nominalmente por el
+Directorio o la Gerencia General. Ejemplos: datos de personas políticamente expuestas (PEP),
+datos de salud, datos biométricos, claves y secretos de infraestructura crítica.
+
+4. RESPONSABILIDADES
+
+4.1 Data Owner (Dueño del dato): responsable de clasificar el activo al momento de su creación
+o modificación sustancial. Debe revisar la clasificación al menos una vez al año.
+4.2 Data Steward (Custodio): asegura que los controles técnicos reflejan la clasificación
+definida por el Data Owner (accesos, cifrado, retención).
+4.3 Usuarios: respetan la clasificación asignada. No pueden rebajar la clasificación sin
+aprobación del Data Owner y del área de Seguridad de la Información.
+
+5. PROCESO DE CLASIFICACIÓN
+Al crear un nuevo activo de datos, el Data Owner debe:
+a) Identificar si contiene datos personales (según Ley 21.719, Art. 2).
+b) Verificar si contiene datos sensibles (Art. 16) → clasificación mínima: CONFIDENCIAL.
+c) Evaluar el impacto de una brecha (reputacional, legal, operacional).
+d) Registrar la clasificación en el Catálogo de Datos corporativo (herramienta: DataGov360).
+
+6. ETIQUETADO Y CONTROLES SEGÚN NIVEL
+- PÚBLICA: sin etiqueta obligatoria.
+- INTERNA: marca de agua "USO INTERNO" en documentos; control de acceso por red corporativa.
+- CONFIDENCIAL: etiqueta "CONFIDENCIAL" en cabecera; cifrado AES-256; auditoría de accesos.
+- RESTRINGIDA: etiqueta "RESTRINGIDA"; cifrado con llave administrada por Seguridad; acceso
+  auditado en tiempo real; prohibida la copia a dispositivos personales o nubes no aprobadas.
+
+7. INCUMPLIMIENTO
+El incumplimiento de esta política puede derivar en medidas disciplinarias, incluyendo la
+terminación del contrato, además de las responsabilidades civiles y penales que establece
+la Ley 21.719 y el Código del Trabajo.
+
+8. REVISIÓN
+Esta política se revisa anualmente o ante cambios regulatorios relevantes. La próxima revisión
+está programada para el 01/03/2026.
