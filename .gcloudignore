@@ -1,0 +1,29 @@
+# .gcloudignore — qué NO se sube a Cloud Build cuando hacemos `gcloud run deploy --source .`
+#
+# Por qué existe: `gcloud run deploy --source .` empaqueta esta carpeta y la sube a Cloud Build
+# para construir la imagen allá. Sin este archivo, gcloud subiría TODO (incluido .venv con
+# cientos de MB y, peor, el .env con la API key). Esto mantiene el upload liviano y SIN secretos.
+# Cloud Build instala las dependencias desde requirements.txt dentro de la imagen, así que el
+# .venv local no se necesita.
+
+# Entorno virtual local (la imagen instala sus propias deps con pip)
+.venv/
+
+# Volumen de datos de Postgres (no se usa en el backend BigQuery y jamás debe subir)
+pgdata/
+
+# Secreto: la GOOGLE_API_KEY se inyecta en el deploy como variable de entorno / secreto,
+# NUNCA se sube ni se hornea en la imagen.
+.env
+
+# Metadatos de git e historial (pesados e innecesarios para el build)
+.git/
+.gitignore
+
+# Caches y temporales de Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Artefactos que la imagen no necesita para correr
+reportes/

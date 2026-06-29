@@ -30,6 +30,20 @@ class ConnectRequest(BaseModel):
     path: str = Field(..., description="Ruta al archivo CSV en disco a cargar.")
 
 
+class ConnectPgRequest(BaseModel):
+    """Cuerpo de POST /connect-postgres."""
+    table: str = Field(..., description="Nombre de la tabla en Postgres a cargar.")
+    schema_name: str = Field(
+        default="public",
+        alias="schema",
+        description="Esquema de la tabla (por defecto 'public').",
+    )
+    limit: int | None = Field(
+        default=None,
+        description="Máximo de filas a traer (opcional; por defecto todas).",
+    )
+
+
 class ProfileRequest(BaseModel):
     """Cuerpo de POST /profile."""
     table_name: str = Field(

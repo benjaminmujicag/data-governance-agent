@@ -21,6 +21,7 @@ Cómo correr:
   python scripts/test_rag.py
 """
 
+import os
 import sys
 from pathlib import Path
 
@@ -28,7 +29,14 @@ PROJECT_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from app.rag.retriever import retrieve, format_context_for_llm
-from app.rag.indexer import count_chunks, list_documents
+
+# count_chunks/list_documents del MISMO backend que usa retrieve() (postgres|bigquery),
+# para que el conteo del índice consulte la fuente correcta.
+RAG_BACKEND = os.getenv("RAG_BACKEND", "postgres").lower()
+if RAG_BACKEND == "bigquery":
+    from app.rag.bq_store import count_chunks, list_documents
+else:
+    from app.rag.indexer import count_chunks, list_documents
 
 # Pares (pregunta, documento_esperado)
 # El documento_esperado es el nombre del .txt sin extensión

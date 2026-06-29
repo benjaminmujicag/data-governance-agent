@@ -23,13 +23,27 @@ import os
 from dataclasses import dataclass
 
 import psycopg
-from dotenv import load_dotenv
 
+from app.db import conn_params as _conn_params, CONNECT_TIMEOUT_S as _CONNECT_TIMEOUT_S
 from app.rag.embedder import embed_query
 
-load_dotenv()
-
 TABLE_NAME = "governance_chunks"
+
+# Backend del vector store: "postgres" (pgVector, local/Docker) o "bigquery" (Cloud Run/GCP).
+# Se elige por variable de entorno para no tocar código al cambiar de entorno (12-factor).
+def _backend() -> str:
+    return os.getenv("RAG_BACKEND", "postgres").lower()
+
+
+class DatabaseUnavailableError(RuntimeError):
+    """
+    La base vectorial no respondió a tiempo (p. ej. el contenedor de Postgres
+    está caído o Docker no está abierto).
+
+    Hereda de RuntimeError a propósito: la API ya traduce RuntimeError a un 503,
+    así que este error de INFRAESTRUCTURA llega al cliente como '503 servicio no
+    disponible' con un mensaje accionable, en vez de colgarse o dar un 500 opaco.
+    """
 
 
 @dataclass
@@ -39,16 +53,6 @@ class RetrievedChunk:
     chunk_id: int     # posición del chunk dentro del documento
     text: str         # texto del fragmento
     score: float      # similitud coseno [0, 1] — más alto = más relevante
-
-
-def _conn_params() -> dict:
-    return {
-        "host": os.getenv("DB_HOST", "localhost"),
-        "port": os.getenv("DB_PORT", "5432"),
-        "dbname": os.getenv("DB_NAME", "gobernanza"),
-        "user": os.getenv("DB_USER", "postgres"),
-        "password": os.getenv("DB_PASSWORD", "postgres"),
-    }
 
 
 def retrieve(query: str, k: int = 5, min_score: float = 0.3) -> list[RetrievedChunk]:
@@ -69,9 +73,37 @@ def retrieve(query: str, k: int = 5, min_score: float = 0.3) -> list[RetrievedCh
         Lista de RetrievedChunk ordenada de mayor a menor similitud.
     """
     query_vector = embed_query(query)
+
+    # ── Backend BigQuery: delega en bq_store y envuelve el resultado en RetrievedChunk ──
+    # (import perezoso: solo se carga google-cloud-bigquery si realmente usamos este backend)
+    if _backend() == "bigquery":
+        from app.rag import bq_store
+        hits = bq_store.search(query_vector, k=k, min_score=min_score)
+        return [
+            RetrievedChunk(
+                doc_name=h["doc_name"],
+                chunk_id=h["chunk_id"],
+                text=h["text"],
+                score=h["score"],
+            )
+            for h in hits
+        ]
+
+    # ── Backend Postgres/pgVector (default) ────────────────────────────────────────────
     vector_str = "[" + ",".join(str(x) for x in query_vector) + "]"
 
-    conn = psycopg.connect(**_conn_params())
+    params = _conn_params()
+    try:
+        conn = psycopg.connect(**params)
+    except psycopg.OperationalError as exc:
+        # OperationalError agrupa fallos de conexión: timeout, host caído, auth.
+        # Lo traducimos a un mensaje accionable (la causa #1 es Docker apagado).
+        raise DatabaseUnavailableError(
+            f"No se pudo conectar a la base vectorial en {params['host']}:{params['port']} "
+            f"tras {_CONNECT_TIMEOUT_S}s. Verifica que Docker esté abierto y el contenedor "
+            "'gobernanza-db' arriba (docker compose up -d)."
+        ) from exc
+
     try:
         # <=> = distancia coseno; transformamos a similitud = 1 - distancia
         rows = conn.execute(

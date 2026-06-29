@@ -10,6 +10,11 @@ pgvector                # tipo vector para Postgres desde Python
 pandas                  # manipulación y perfilado de tablas
 openpyxl                # leer Excel (.xlsx) en conectores
 
+# --- BigQuery (Hito 9-D conector + Hito 9-C backend RAG en BigQuery) ---
+google-cloud-bigquery   # vector store del RAG en BQ (RAG_BACKEND=bigquery) y conector bq_loader
+                        # autenticación por ADC: gcloud auth application-default login (local) o
+                        # la service account del servicio en Cloud Run (sin contraseñas).
+
 # --- API y UI ---
 fastapi                 # API HTTP del agente
 uvicorn[standard]       # servidor para FastAPI

@@ -27,17 +27,20 @@ Manejo de errores:
 
 from __future__ import annotations
 
-from fastapi import FastAPI, HTTPException
+from fastapi import Depends, FastAPI, HTTPException
 
 from app.api.schemas import (
     ConnectRequest,
+    ConnectPgRequest,
     ProfileRequest,
     AskRequest,
     AskResponse,
     HealthResponse,
 )
+from app.api.ratelimit import rate_limit_ask
 from app.agent import tools
 from app.agent.agent import ask as agent_ask
+from app.connectors.pg_loader import DatabaseUnavailableError
 
 app = FastAPI(
     title="Agente de Gobernanza de Datos",
@@ -67,6 +70,16 @@ def connect(req: ConnectRequest) -> dict:
         raise HTTPException(status_code=404, detail=str(exc)) from exc
 
 
+@app.post("/connect-postgres")
+def connect_postgres(req: ConnectPgRequest) -> dict:
+    """Carga una tabla desde Postgres y la registra en el catálogo en memoria."""
+    try:
+        return tools.connect_postgres(req.table, schema=req.schema_name, limit=req.limit)
+    except DatabaseUnavailableError as exc:
+        # La base no responde (apagada / red / credenciales) → 503 servicio no disponible.
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+
+
 @app.post("/profile")
 def profile(req: ProfileRequest) -> dict:
     """Perfila una tabla y devuelve su digest (esquema, nulos, PII, flags de calidad)."""
@@ -78,8 +91,13 @@ def profile(req: ProfileRequest) -> dict:
 
 
 @app.post("/ask", response_model=AskResponse)
-def ask(req: AskRequest) -> AskResponse:
-    """El agente responde la pregunta usando function calling sobre sus tools."""
+def ask(req: AskRequest, _rl: None = Depends(rate_limit_ask)) -> AskResponse:
+    """
+    El agente responde la pregunta usando function calling sobre sus tools.
+
+    Depends(rate_limit_ask) se ejecuta ANTES del cuerpo: si se excede el rate limit por IP
+    o el tope global diario, lanza 429 y este handler nunca corre (no se gasta cuota Gemini).
+    """
     question = req.question
     if req.table_name:
         # Si el cliente indica una tabla, se la damos al agente como pista de contexto.

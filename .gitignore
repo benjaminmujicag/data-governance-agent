@@ -1,9 +1,12 @@
 # Secretos
 .env
 
-# Documentos internos (estrategia de aprendizaje / contexto personal — no publicar)
+# Documentos internos del autor — no publicar
 CONTEXTO.md
 APRENDIZAJES.md
+
+# Reportes generados localmente (se regeneran al correr scripts/evaluar.py)
+reportes/
 
 # Python
 .venv/

@@ -20,6 +20,7 @@ Precondiciones:
 Costo estimado: ~$0.00 (Gemini embedding free tier cubre esto con holgura).
 """
 
+import os
 import sys
 from pathlib import Path
 
@@ -29,7 +30,15 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from app.rag.chunker import chunk_directory, Chunk
 from app.rag.embedder import embed_batch
-from app.rag.indexer import create_table, insert_chunks, count_chunks, list_documents
+
+# Backend del vector store: "postgres" (pgVector, default) o "bigquery" (GCP).
+# Ambos módulos exponen las MISMAS funciones (create_table/insert_chunks/count_chunks/
+# list_documents), así que el resto del script no cambia: solo elegimos de dónde importarlas.
+RAG_BACKEND = os.getenv("RAG_BACKEND", "postgres").lower()
+if RAG_BACKEND == "bigquery":
+    from app.rag.bq_store import create_table, insert_chunks, count_chunks, list_documents
+else:
+    from app.rag.indexer import create_table, insert_chunks, count_chunks, list_documents
 
 POLITICAS_DIR = PROJECT_ROOT / "data" / "politicas"
 CHUNK_SIZE = 300
@@ -77,13 +86,13 @@ def main():
     print(f"      Embeddings generados: {len(embeddings)}")
     print(f"      Dimensión del vector: {len(embeddings[0])}")
 
-    # 3. Crear tabla en pgVector
-    print(f"\n[3/4] Preparando tabla en pgVector...")
+    # 3. Crear tabla en el backend elegido
+    print(f"\n[3/4] Preparando tabla en el backend '{RAG_BACKEND}'...")
     create_table(drop_first=False)  # idempotente
     print(f"      Tabla '{TABLE_NAME_INFO}' lista.")
 
     # 4. Insertar
-    print(f"\n[4/4] Insertando en pgVector (idempotente)...")
+    print(f"\n[4/4] Insertando en el backend '{RAG_BACKEND}' (idempotente)...")
     inserted = insert_chunks(chunks, embeddings)
     total_in_db = count_chunks()
     docs_in_db = list_documents()

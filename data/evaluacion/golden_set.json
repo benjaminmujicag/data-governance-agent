@@ -1,0 +1,207 @@
+{
+  "_meta": {
+    "descripcion": "Golden set de evaluacion del agente de gobernanza (Hito 7). Cada item es un par pregunta/respuesta_esperada con la fuente (documento del corpus o tabla del catalogo) que el agente DEBERIA usar y citar. Las respuestas_esperadas estan ancladas al contenido real de data/politicas/ y data/catalogo/.",
+    "campos": {
+      "id": "Identificador estable del caso (para rastrear regresiones entre corridas).",
+      "categoria": "Agrupacion tematica para reportar metricas por tipo de pregunta.",
+      "pregunta": "Lo que se le envia al agente.",
+      "respuesta_esperada": "Respuesta de referencia (la 'pauta de correccion') que se le da al juez como ancla.",
+      "fuente_esperada": "Nombre del documento (stem del .txt, sin extension) o de la tabla que deberia citarse. 'ninguna' = el agente NO debe inventar fuente.",
+      "tool_esperada": "Herramienta que el agente deberia invocar: search_governance (politicas/ley) o profile_table (calidad/PII de una tabla)."
+    }
+  },
+  "casos": [
+    {
+      "id": "Q01",
+      "categoria": "pii",
+      "pregunta": "Que se considera PII directa segun la politica de datos personales?",
+      "respuesta_esperada": "PII directa es la que identifica por si sola: RUT o cedula de identidad, nombre completo, numero de pasaporte, correo electronico personal, telefono movil o fijo personal, y numero de cuenta bancaria o tarjeta de credito.",
+      "fuente_esperada": "politica_pii_y_datos_personales",
+      "tool_esperada": "search_governance"
+    },
+    {
+      "id": "Q02",
+      "categoria": "pii",
+      "pregunta": "Puedo usar el RUT de un cliente para una campana de marketing?",
+      "respuesta_esperada": "No sin consentimiento explicito previo. Esta expresamente prohibido usar datos de clientes para marketing sin consentimiento, y el RUT es PII directa; usarlo para un fin distinto al declarado viola los principios de finalidad y licitud.",
+      "fuente_esperada": "politica_pii_y_datos_personales",
+      "tool_esperada": "search_governance"
+    },
+    {
+      "id": "Q03",
+      "categoria": "pii",
+      "pregunta": "Ante una brecha que afecte datos personales, en cuanto tiempo y a quien debe reportarse (DPO y autoridad de control)?",
+      "respuesta_esperada": "La brecha debe reportarse al DPO en un maximo de 24 horas desde su deteccion. Si implica riesgo para los titulares, ademas se notifica al Consejo para la Transparencia en un maximo de 72 horas.",
+      "fuente_esperada": "politica_pii_y_datos_personales",
+      "tool_esperada": "search_governance"
+    },
+    {
+      "id": "Q04",
+      "categoria": "retencion",
+      "pregunta": "Cuanto tiempo debo guardar los datos de identificacion de un cliente?",
+      "respuesta_esperada": "10 anos desde el termino de la relacion comercial, fundado en el Codigo Tributario y la normativa de la CMF.",
+      "fuente_esperada": "politica_retencion_datos",
+      "tool_esperada": "search_governance"
+    },
+    {
+      "id": "Q05",
+      "categoria": "retencion",
+      "pregunta": "Por cuanto tiempo se retienen los logs de API y llamadas a servicios?",
+      "respuesta_esperada": "Los logs de API y llamadas a servicios se retienen 90 dias.",
+      "fuente_esperada": "politica_retencion_datos",
+      "tool_esperada": "search_governance"
+    },
+    {
+      "id": "Q06",
+      "categoria": "retencion",
+      "pregunta": "Cuanto tiempo se conservan los datos de nomina de un empleado?",
+      "respuesta_esperada": "El contrato de trabajo y los datos de nomina se conservan 5 anos desde el termino de la relacion laboral, por la prescripcion de acciones laborales del Codigo del Trabajo.",
+      "fuente_esperada": "politica_retencion_datos",
+      "tool_esperada": "search_governance"
+    },
+    {
+      "id": "Q07",
+      "categoria": "retencion",
+      "pregunta": "Cuanto tiempo deben guardarse los registros KYC y los reportes de operaciones sospechosas?",
+      "respuesta_esperada": "Minimo 10 anos: los registros KYC desde el fin de la relacion con el cliente y los reportes de operaciones sospechosas (ROS) desde la fecha del reporte, conforme a la Ley 19.913 y circulares de la UAF.",
+      "fuente_esperada": "politica_retencion_datos",
+      "tool_esperada": "search_governance"
+    },
+    {
+      "id": "Q08",
+      "categoria": "clasificacion",
+      "pregunta": "Cuales son los niveles de clasificacion de datos de la empresa?",
+      "respuesta_esperada": "Cuatro niveles: Publica, Interna, Confidencial y Restringida, en orden creciente de sensibilidad.",
+      "fuente_esperada": "politica_clasificacion_datos",
+      "tool_esperada": "search_governance"
+    },
+    {
+      "id": "Q09",
+      "categoria": "clasificacion",
+      "pregunta": "Que clasificacion minima deben tener los datos sensibles?",
+      "respuesta_esperada": "Si un activo contiene datos sensibles, su clasificacion minima es CONFIDENCIAL. Casos de maxima sensibilidad como datos de salud o biometricos se clasifican como RESTRINGIDA.",
+      "fuente_esperada": "politica_clasificacion_datos",
+      "tool_esperada": "search_governance"
+    },
+    {
+      "id": "Q10",
+      "categoria": "clasificacion",
+      "pregunta": "Que controles requiere un dato clasificado como Confidencial?",
+      "respuesta_esperada": "Cifrado en reposo y en transito (AES-256), registro y auditoria de accesos, etiqueta CONFIDENCIAL en cabecera y autorizacion explicita del Data Owner.",
+      "fuente_esperada": "politica_clasificacion_datos",
+      "tool_esperada": "search_governance"
+    },
+    {
+      "id": "Q11",
+      "categoria": "acceso",
+      "pregunta": "A que datos puede acceder un Analista de Datos?",
+      "respuesta_esperada": "A datos de nivel INTERNO y PUBLICO. A datos CONFIDENCIALES solo a traves de vistas anonimizadas o seudonimizadas, y nunca a datos RESTRINGIDOS.",
+      "fuente_esperada": "politica_acceso_y_autorizacion",
+      "tool_esperada": "search_governance"
+    },
+    {
+      "id": "Q12",
+      "categoria": "acceso",
+      "pregunta": "Cual es el proceso para solicitar acceso a una base de datos?",
+      "respuesta_esperada": "Se ingresa una solicitud en el sistema GovAccess indicando datos, proposito y duracion; el Data Owner aprueba o rechaza en un maximo de 3 dias habiles; para datos confidenciales o restringidos se requiere aprobacion adicional del CISO o DPO; luego IT implementa y registra el acceso.",
+      "fuente_esperada": "politica_acceso_y_autorizacion",
+      "tool_esperada": "search_governance"
+    },
+    {
+      "id": "Q13",
+      "categoria": "acceso",
+      "pregunta": "Cada cuanto se hace la revision de accesos (Access Review)?",
+      "respuesta_esperada": "Cada 6 meses (semestral). Los Data Owners deben certificar o revocar cada acceso vigente; los accesos no certificados se revocan automaticamente al cierre del proceso.",
+      "fuente_esperada": "politica_acceso_y_autorizacion",
+      "tool_esperada": "search_governance"
+    },
+    {
+      "id": "Q14",
+      "categoria": "acceso",
+      "pregunta": "Donde deben guardarse las credenciales de las cuentas de servicio de las aplicaciones?",
+      "respuesta_esperada": "Los secretos se gestionan en Vault o Secret Manager. Esta prohibido ponerlos en el codigo fuente o en archivos .env en repositorios compartidos o publicos, y deben rotarse al menos cada 90 dias.",
+      "fuente_esperada": "politica_acceso_y_autorizacion",
+      "tool_esperada": "search_governance"
+    },
+    {
+      "id": "Q15",
+      "categoria": "calidad_politica",
+      "pregunta": "Cuales son las dimensiones de calidad de datos que evalua la empresa?",
+      "respuesta_esperada": "Seis dimensiones: completitud, exactitud, consistencia, oportunidad (timeliness), unicidad (sin duplicados) y validez.",
+      "fuente_esperada": "politica_calidad_del_dato",
+      "tool_esperada": "search_governance"
+    },
+    {
+      "id": "Q16",
+      "categoria": "calidad_politica",
+      "pregunta": "Cual es el SLA minimo de completitud para campos criticos?",
+      "respuesta_esperada": "95% de completitud en campos criticos (los que alimentan reportes regulatorios o decisiones de credito). En campos de contacto como email y telefono el SLA es 90%.",
+      "fuente_esperada": "politica_calidad_del_dato",
+      "tool_esperada": "search_governance"
+    },
+    {
+      "id": "Q17",
+      "categoria": "ley",
+      "pregunta": "Que dice la Ley 21.719 sobre el tratamiento de datos sensibles?",
+      "respuesta_esperada": "Por regla general el tratamiento de datos sensibles esta prohibido (Art. 16). Solo es licito con consentimiento explicito del titular, para proteger intereses vitales, para fines medicos, o por interes publico significativo con base legal. Ademas prohibe usar datos sensibles en decisiones automatizadas con efectos juridicos sin revision humana.",
+      "fuente_esperada": "resumen_ley_21719",
+      "tool_esperada": "search_governance"
+    },
+    {
+      "id": "Q18",
+      "categoria": "ley",
+      "pregunta": "En que plazo se debe notificar una brecha de seguridad a la autoridad de control segun la ley?",
+      "respuesta_esperada": "Se notifica al Consejo para la Transparencia en un plazo no superior a 72 horas (Art. 52). Si hay alto riesgo para los titulares, tambien se les notifica sin dilacion indebida.",
+      "fuente_esperada": "resumen_ley_21719",
+      "tool_esperada": "search_governance"
+    },
+    {
+      "id": "Q19",
+      "categoria": "ley",
+      "pregunta": "Cuales son las bases de licitud para tratar datos personales segun la Ley 21.719?",
+      "respuesta_esperada": "Las bases del Art. 12: consentimiento del titular, ejecucion de un contrato, cumplimiento de una obligacion legal, proteccion del interes vital, mision de interes publico, e interes legitimo (con evaluacion documentada).",
+      "fuente_esperada": "resumen_ley_21719",
+      "tool_esperada": "search_governance"
+    },
+    {
+      "id": "Q20",
+      "categoria": "ley",
+      "pregunta": "Cual es la sancion maxima por una infraccion gravisima a la ley de proteccion de datos?",
+      "respuesta_esperada": "Multas de hasta 10.000 UTM, o hasta el 4% del ingreso anual global del infractor, aplicandose el monto mayor (Art. 60).",
+      "fuente_esperada": "resumen_ley_21719",
+      "tool_esperada": "search_governance"
+    },
+    {
+      "id": "Q21",
+      "categoria": "ia",
+      "pregunta": "Puedo enviar datos personales sin enmascarar a una API externa de un modelo de lenguaje?",
+      "respuesta_esperada": "No. Esta prohibido enviar datos personales no enmascarados al proveedor del LLM. Ademas se exige contrato de encargo de tratamiento con el proveedor y revision humana de las respuestas antes de usarlas en decisiones de alto impacto.",
+      "fuente_esperada": "politica_uso_ia_y_modelos",
+      "tool_esperada": "search_governance"
+    },
+    {
+      "id": "Q22",
+      "categoria": "tabla_pii",
+      "pregunta": "Que columnas con PII tiene la tabla de clientes?",
+      "respuesta_esperada": "La tabla clientes contiene PII como rut, email y telefono (y nombre). Son datos personales que requieren proteccion.",
+      "fuente_esperada": "clientes",
+      "tool_esperada": "profile_table"
+    },
+    {
+      "id": "Q23",
+      "categoria": "tabla_calidad",
+      "pregunta": "Que problemas de calidad tiene la tabla de establecimientos de salud?",
+      "respuesta_esperada": "Tiene alta proporcion de nulos (la columna FechaCierre con ~94% nulos), nulos semanticos como 'No Aplica' en varias columnas, fechas almacenadas como texto en vez de tipo fecha, y presencia de PII (telefono).",
+      "fuente_esperada": "establecimientos_salud",
+      "tool_esperada": "profile_table"
+    },
+    {
+      "id": "Q24",
+      "categoria": "anti_alucinacion",
+      "pregunta": "Cual es la politica de teletrabajo y home office de la empresa?",
+      "respuesta_esperada": "No hay informacion sobre teletrabajo en el corpus de gobernanza disponible. El agente debe declarar explicitamente que no encontro base suficiente para responder y NO inventar una politica.",
+      "fuente_esperada": "ninguna",
+      "tool_esperada": "search_governance"
+    }
+  ]
+}

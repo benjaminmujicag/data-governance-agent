@@ -39,6 +39,7 @@ from google.genai import errors as genai_errors
 from dotenv import load_dotenv
 
 from app.agent.tools import TOOL, DISPATCH
+from app.rag.retriever import DatabaseUnavailableError
 
 load_dotenv()
 
@@ -209,8 +210,14 @@ def ask(question: str, max_steps: int = 6, verbose: bool = False) -> AgentResult
                 try:
                     result_payload = {"result": func(**args)}
                     ok = True
+                except DatabaseUnavailableError:
+                    # Error de INFRAESTRUCTURA (DB caída): el modelo no puede resolverlo
+                    # razonando. Lo dejamos propagar para que la API lo traduzca a 503
+                    # rápido, en vez de gastar otra llamada al LLM en explicarlo.
+                    raise
                 except Exception as exc:  # noqa: BLE001
-                    # Le devolvemos el error al modelo para que lo maneje (p. ej. reintente).
+                    # Errores "normales" de una tool: se los devolvemos al modelo para
+                    # que los maneje (p. ej. tabla inexistente → puede sugerir otra).
                     result_payload = {"error": str(exc)}
                     ok = False
 

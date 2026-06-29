@@ -1,0 +1,26 @@
+# .dockerignore — que NO se copia al contexto de build de la imagen.
+# Igual que .gitignore, pero para Docker. Mantiene la imagen liviana y SIN secretos.
+
+# Entorno virtual local (la imagen instala sus propias deps con pip)
+.venv/
+
+# Volumen de datos de Postgres: es la base de datos ENTERA, jamas debe entrar a la imagen
+pgdata/
+
+# Secretos: la API key se inyecta en runtime via env_file, NO se hornea en la imagen
+.env
+
+# Metadatos de git e historial
+.git/
+.gitignore
+
+# Caches y temporales de Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Salidas/artefactos que no necesita la imagen para correr
+reportes/
+
+# Docs internas y de proyecto (no afectan la ejecucion)
+*.md

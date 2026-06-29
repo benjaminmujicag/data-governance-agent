@@ -25,6 +25,7 @@ from pathlib import Path
 from google.genai import types
 
 from app.connectors.csv_loader import load_csv
+from app.connectors.pg_loader import load_postgres
 from app.profiler.profiler import profile
 from app.profiler.models import ProfileReport
 from app.rag.retriever import retrieve
@@ -85,6 +86,30 @@ def connect_csv(path: str) -> dict:
         },
         "columnas": list(table.df.columns),
         "advertencias": table.metadata.get("warnings", []),
+    }
+
+
+def connect_postgres(table: str, schema: str = "public", limit: int | None = None) -> dict:
+    """
+    Carga una tabla desde Postgres y la registra en el catálogo en memoria.
+
+    Es el gemelo de connect_csv pero para una base de datos: una vez registrada,
+    profile_table(table) la encuentra y la perfila igual que un CSV (mismo DataTable).
+
+    Devuelve un resumen (NO el DataFrame completo): nombre, origen, forma,
+    columnas y advertencias de carga.
+    """
+    datatable = load_postgres(table=table, schema=schema, limit=limit)
+    catalog.register_table(table, datatable)
+    return {
+        "table_name": table,
+        "source": datatable.source,
+        "shape": {
+            "filas": datatable.df.shape[0],
+            "columnas": datatable.df.shape[1],
+        },
+        "columnas": list(datatable.df.columns),
+        "advertencias": datatable.metadata.get("warnings", []),
     }
 
 
@@ -175,6 +200,32 @@ _FUNCTION_DECLARATIONS = [
         },
     ),
     types.FunctionDeclaration(
+        name="connect_postgres",
+        description=(
+            "Carga una tabla desde una base de datos PostgreSQL y la registra en el catálogo. "
+            "Úsala cuando el usuario quiera conectar/ingerir una tabla que vive en Postgres "
+            "(no en un archivo CSV), indicando el nombre de la tabla."
+        ),
+        parameters_json_schema={
+            "type": "object",
+            "properties": {
+                "table": {
+                    "type": "string",
+                    "description": "Nombre de la tabla en Postgres a cargar.",
+                },
+                "schema": {
+                    "type": "string",
+                    "description": "Esquema de la tabla (por defecto 'public').",
+                },
+                "limit": {
+                    "type": "integer",
+                    "description": "Máximo de filas a traer (opcional; por defecto todas).",
+                },
+            },
+            "required": ["table"],
+        },
+    ),
+    types.FunctionDeclaration(
         name="profile_table",
         description=(
             "Perfila una tabla y devuelve su esquema, porcentaje de nulos, columnas con PII "
@@ -237,6 +288,7 @@ TOOL = types.Tool(function_declarations=_FUNCTION_DECLARATIONS)
 # El agente hace: DISPATCH[nombre_pedido](**argumentos).
 DISPATCH = {
     "connect_csv": connect_csv,
+    "connect_postgres": connect_postgres,
     "profile_table": profile_table,
     "search_governance": search_governance,
     "list_catalog": list_catalog,

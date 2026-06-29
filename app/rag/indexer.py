@@ -22,29 +22,15 @@ SDK de DB: psycopg3 (psycopg[binary]) — la versión 3 del driver Python de Pos
 """
 
 from __future__ import annotations
-import os
 from contextlib import contextmanager
 
 import psycopg
-from dotenv import load_dotenv
 
+from app.db import conn_params as _conn_params
 from app.rag.chunker import Chunk
-
-load_dotenv()
 
 VECTOR_DIM = 3072
 TABLE_NAME = "governance_chunks"
-
-
-def _conn_params() -> dict:
-    """Lee los parámetros de conexión del .env (mismos que docker-compose.yml)."""
-    return {
-        "host": os.getenv("DB_HOST", "localhost"),
-        "port": os.getenv("DB_PORT", "5432"),
-        "dbname": os.getenv("DB_NAME", "gobernanza"),
-        "user": os.getenv("DB_USER", "postgres"),
-        "password": os.getenv("DB_PASSWORD", "postgres"),
-    }
 
 
 @contextmanager

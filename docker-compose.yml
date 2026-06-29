@@ -1,14 +1,59 @@
-# Levanta una base PostgreSQL con la extensión pgVector ya incluida.
-# Uso: docker compose up -d   (apagar: docker compose down)
+# docker-compose.yml — orquesta los servicios del proyecto como contenedores.
+#
+# Que es compose: en vez de levantar cada contenedor a mano con `docker run ...`, describimos
+# TODOS los servicios aqui y los levantamos juntos con un comando. Compose crea ademas una
+# RED interna privada donde cada servicio se alcanza por su NOMBRE (db, api, ui), no por localhost.
+#
+# Uso:
+#   docker compose up -d --build     (construye imagenes y levanta todo en segundo plano)
+#   docker compose logs -f api       (ver logs de la API)
+#   docker compose down              (apagar todo)
+#
+# Concepto clave (red de contenedores): "localhost" dentro de un contenedor se refiere a SI MISMO,
+# no a tu maquina ni a los otros contenedores. Por eso la API alcanza Postgres en el host 'db'
+# (su nombre de servicio) y la UI alcanza la API en 'http://api:8000'. Lo resolvemos abajo con
+# variables de entorno (DB_HOST y API_URL) que SOBRESCRIBEN los defaults de localhost.
+
 services:
+  # ── Base de datos vectorial (Postgres + pgVector) ──────────────────────────────
   db:
-    image: pgvector/pgvector:pg16   # Postgres 16 + extensión pgvector preinstalada
+    image: pgvector/pgvector:pg16   # Postgres 16 + extension pgvector preinstalada
     container_name: gobernanza-db
     environment:
       POSTGRES_DB: gobernanza
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
-      - "5432:5432"                 # expone la DB en tu localhost:5432
+      - "5432:5432"                 # expone la DB en tu localhost:5432 (util para scripts locales)
     volumes:
       - ./pgdata:/var/lib/postgresql/data   # persiste los datos entre reinicios
+
+  # ── API del agente (FastAPI sobre uvicorn) ─────────────────────────────────────
+  api:
+    build: .                        # construye la imagen usando el Dockerfile de esta carpeta
+    container_name: gobernanza-api
+    env_file: .env                  # carga GOOGLE_API_KEY, LLM_MODEL, etc. desde el .env
+    environment:
+      # 'environment' tiene PRECEDENCIA sobre env_file: aqui sobrescribimos DB_HOST.
+      # El .env dice DB_HOST=localhost (para correr scripts en tu maquina), pero DENTRO
+      # de la red de compose Postgres se llama 'db'. Sin esto, la API buscaria la DB en
+      # si misma (localhost del contenedor api) y fallaria con DatabaseUnavailableError.
+      DB_HOST: db
+    ports:
+      - "8000:8000"                 # http://localhost:8000/docs en tu navegador
+    depends_on:
+      - db
+
+  # ── UI de demo (Streamlit) — REUSA la misma imagen, distinto comando ───────────
+  ui:
+    build: .                        # misma imagen que api (no se construye dos veces gracias al cache)
+    container_name: gobernanza-ui
+    env_file: .env
+    environment:
+      # La UI es un cliente HTTP de la API: la alcanza por el nombre de servicio 'api'.
+      API_URL: http://api:8000
+    command: streamlit run app/ui/app.py --server.address 0.0.0.0 --server.port 8501
+    ports:
+      - "8501:8501"                 # http://localhost:8501 en tu navegador
+    depends_on:
+      - api
